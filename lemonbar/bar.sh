@@ -9,6 +9,9 @@ white=f0f0f0
 grey=2d2d2d
 active=c3ac82
 
+xset fp+ /usr/share/fonts/myfonts/gohu
+xset fp rehash
+
 font=-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
 
 desktop() {
