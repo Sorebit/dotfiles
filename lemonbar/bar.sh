@@ -7,8 +7,6 @@
 
 white=f0f0f0
 grey=2d2d2d
-#grey=000c17
-#active=d7c96b
 active=c3ac82
 
 font=-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
