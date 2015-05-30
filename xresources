@@ -1,0 +1,51 @@
+! Font
+*font:			xft:GohuFont:size=8
+*boldFont:		xft:GohuFont:size=8
+
+! Enable clickable links
+*url-launcher: firefox
+
+! Scrollbar
+*scrollBar: false
+
+! Paste with Control-Shift-V
+*keysym.Shift-Control-V: perl:clipboard:paste
+*perl-ext-common: default,clipboard
+*iso14755: False
+
+! Colors
+*foreground:	#e1e1e1
+*background:	#2d2d2d
+*cursorColor:	#e1e1e1
+
+! Black
+*color0:		#5a5a5a
+*color8:		#8c8c8c
+
+! Red
+*color1:		#de8990
+*color9:		#d0a8ab
+
+! Green
+*color2:		#94daa9
+*color10:		#bae8d2
+
+! Yellow
+*color3:		#dee7aa
+*color11:		#d7c96b
+
+! Blue
+*color4:		#9cdbdf
+*color12:		#6cb4dd
+
+! Magenta
+*color5:		#cca8c9
+*color13:		#db79bf
+
+! Cyan
+*color6:		#9ad4c8
+*color14:		#59b0b2
+
+! White
+*color7:		#e1e1e1
+*color15:		#f0f0f0
