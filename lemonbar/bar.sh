@@ -10,11 +10,11 @@ white=f0f0f0
 grey=2d2d2d
 active=c3ac82
 
+# This should go to xinitrc
 xset fp+ /usr/share/fonts/myfonts/gohu
 xset fp+ /usr/share/fonts/myfonts/icons
 xset fp rehash
 
-gohu=-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
 icon=-gohu-gohuicon-medium-r-normal--11-80-100-100-c-60-iso8859-1
 
 icon() {
@@ -80,6 +80,7 @@ while true; do
 	clock="$(clock)"
 	battery="$(battery)"
 	volume="$(volume)"
+
 	case "$desktop" in
 		1) 
 			echo "%{F#FF$white}%{B#FF$active}  $(icon 81)  www   %{B#FF$grey}  $(icon 85)  src   %{B#FF$grey}  $(icon 83)  irc   %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
@@ -94,4 +95,4 @@ while true; do
 	
 done |
 
-lemonbar -g 1280x20+0+0 -f $icon  -B \#FF$grey 
+lemonbar -g 1280x20+0+0 -B \#FF$grey -f $icon
