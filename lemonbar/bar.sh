@@ -1,49 +1,78 @@
 #!/bin/bash
+#
+# Sorbet - (no copyrights whatsoever) 2015
 
 # TODO:
 # CPU usage ?
 # WiFi 
-# Volume
 
 white=f0f0f0
 grey=2d2d2d
 active=c3ac82
 
 xset fp+ /usr/share/fonts/myfonts/gohu
+xset fp+ /usr/share/fonts/myfonts/icons
 xset fp rehash
 
-font=-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
+gohu=-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
+icon=-gohu-gohuicon-medium-r-normal--11-80-100-100-c-60-iso8859-1
 
-desktop() {
-	current="$(/etc/lemonbar/workspace.sh)"
-	echo "$current"
+icon() {
+	echo "$(printf "\x$1")"
 }
 
 clock() {
 	date +"%d %B, %H:%M"
 }
 
+desktop() {
+	echo "$(/etc/lemonbar/workspace.sh)"
+}
+
 battery() {
-	batcol=$white
 	status="$(cat /sys/class/power_supply/BAT1/status | cut -c 1-3 )"
-	#case "$status" in
-	# 	Full)
-	# 		status=""
-	# 		;;
-	# 	Charging)
-	# 		status=""
-	# 		;;
-	# 	Discharging)
-	# 		status=""
-	# 		;;
-	#
 	left="$(cat /sys/class/power_supply/BAT1/capacity)"
-	echo "%{F#FF$batcol}$status $left%%"
+
+	case "$status" in
+		Ful)
+			status="$(icon 87)"
+			;;
+		Cha)
+			status="$(icon 88)"
+			;;
+		Dis)
+			if [ $left -gt 90 ]; then
+				status="$(icon 8d)"
+			elif [ $left -gt 70 ]; then
+				status="$(icon 8c)"
+			elif [ $left -gt 40 ]; then
+				status="$(icon 8b)"
+			elif [ $left -gt 15 ]; then
+				status="$(icon 8a)"
+			else
+				status="$(icon 89)"
+			fi
+			;;
+	esac
+	
+	echo "$status  $left%%"
 }
 
 volume() {
-	level="$(amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p'| uniq)"
-	echo "Vol $level%%"
+	level="$(pactl list sinks | grep "Poziom " | cut -c 27-28)"
+	mute="$(pactl list sinks | grep "Wyciszenie" | cut -c 14-16)"
+	if [ $mute = yes ]; then
+			icon="$(icon 98)"
+	else
+		if [ $level -gt 50 ]; then
+			icon="$(icon 9b)"
+		elif [ $level -gt 0 ]; then
+			icon="$(icon 9a)"
+		else
+			icon="$(icon 99)"
+		fi
+	fi
+	echo "$icon $level%%"
 }
 
 while true; do
@@ -53,16 +82,16 @@ while true; do
 	volume="$(volume)"
 	case "$desktop" in
 		1) 
-			echo "%{F#FF$white}%{B#FF$active}  W   www    %{B#FF$grey}  S   src   %{B#FF$grey}  I   irc    %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
+			echo "%{F#FF$white}%{B#FF$active}  $(icon 81)  www   %{B#FF$grey}  $(icon 85)  src   %{B#FF$grey}  $(icon 83)  irc   %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
 			;;
 		2) 
-			echo "%{F#FF$white}%{B#FF$grey}  W   www    %{B#FF$active}  S   src   %{B#FF$grey}  I   irc    %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
+			echo "%{F#FF$white}%{B#FF$grey}  $(icon 81)  www   %{B#FF$active}  $(icon 85)  src   %{B#FF$grey}  $(icon 83)  irc   %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
 			;;
 		3)
-			echo "%{F#FF$white}%{B#FF$grey}  W   www    %{B#FF$grey}  S   src   %{B#FF$active}  I   irc    %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
+			echo "%{F#FF$white}%{B#FF$grey}  $(icon 81)  www   %{B#FF$grey}  $(icon 85)  src   %{B#FF$active}  $(icon 83)  irc   %{B#FF$grey}%{c}   $clock   %{B#FF$active}%{r}   $volume   $battery   %{B#FF$grey}"
 			;;
 	esac
-	sleep 0.15
+	
 done |
 
-lemonbar -g 1280x20+0+0 -f $font -d -B \#FF$grey | bash
+lemonbar -g 1280x20+0+0 -f $icon  -B \#FF$grey 
