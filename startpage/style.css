@@ -1,0 +1,39 @@
+html {
+
+}
+
+body {
+	background: #2d2d2d;
+	color: #e0e0e0;
+	font-family: "GohuFont";
+	font-size: 11pt;
+	height: 90%;
+	line-height: 25px;
+	margin: 0px;
+	padding: 0px;
+	width: 90%;
+}
+
+a {
+	color: #c3ac82 !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease 0s !important;
+	border-bottom: 1px solid #2d2d2d !important;
+	padding-right: 6px;
+}
+
+a:hover {
+	border-bottom: 1px solid #c3ac82 !important;
+	color: #c3ac82;
+}
+
+#content h {
+	padding-left: 55px;
+}
+
+#links {
+	border-bottom: 1px solid #c3ac82;
+	padding-bottom: 3px;
+	padding-left: 55px;
+	padding-top: 3px;
+}
