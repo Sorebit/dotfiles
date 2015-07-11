@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Print the active workspace
+
 # Execute
 str=$(i3-msg -t get_workspaces)
 
