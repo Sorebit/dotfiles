@@ -1,0 +1,46 @@
+[global]
+	font = "GohuFont 7"
+	format = "%s %p\n%b"
+	geometry = "300x5-7+27"
+	sort = yes
+	idle_threshold = 0
+	alignment = center
+	show_age_threshold = 60
+	sticky_history = yes
+	follow = mouse
+	word_wrap = yes
+	separator_height = 3
+	padding = 10
+	horizontal_padding = 10
+	separator_color = frame
+
+[frame]
+	width = 3
+	color = "#4d4d4d"
+
+[shortcuts]
+	close = ctrl+space
+	close_all = ctrl+shift+space
+	history = ctrl+grave
+	context = ctrl+shift+period
+
+[urgency_low]
+	background = "#2d2d2d"
+	foreground = "#f0f0f0"
+	timeout = 10
+
+[urgency_normal]
+	background = "#2d2d2d"
+	foreground = "#f0f0f0"
+	timeout = 15
+
+[urgency_critical]
+	background = "#c3ac82"
+	foreground = "#f0f0f0"
+	timeout = 0
+
+[irc]
+	appname = weechat
+	timeout = 0
+	background = "#99FF33"
+	foreground = "#000000"
