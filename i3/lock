@@ -1,7 +1,0 @@
-#!/bin/bash
-
-image=/tmp/screenshot.png
-
-scrot $image
-convert $image -blur 0x4 $image
-i3lock -i $image 
