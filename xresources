@@ -2,6 +2,9 @@
 *font:			xft:GohuFont:size=8
 *boldFont:		xft:GohuFont:size=8
 
+! Create some space
+*internalBorder:	14
+
 ! Enable clickable links
 *url-launcher: firefox
 
