@@ -23,16 +23,16 @@
 *color8:		#8c8c8c
 
 ! Red
-*color1:		#de8990
-*color9:		#d0a8ab
+*color1: 		#d0a8ab
+*color9:		#de8990
 
 ! Green
-*color2:		#94daa9
-*color10:		#bae8d2
+*color2:		#bae8d2
+*color10:		#94daa9
 
 ! Yellow
-*color3:		#dee7aa
-*color11:		#d7c96b
+*color3:		#e3c794
+*color11:		#c3ac82
 
 ! Blue
 *color4:		#9cdbdf
@@ -46,6 +46,7 @@
 *color6:		#9ad4c8
 *color14:		#59b0b2
 
+
 ! White
-*color7:		#e1e1e1
-*color15:		#f0f0f0
+*color7:		#f0f0f0
+*color15:		#e1e1e1
