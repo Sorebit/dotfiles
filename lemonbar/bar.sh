@@ -2,8 +2,6 @@
 #
 # Sorbet - (no copyrights whatsoever) 2015
 
-# TODO: internet connection notification, daemon, whatever will do
-
 white=f0f0f0
 grey=2d2d2d
 active=c3ac82
