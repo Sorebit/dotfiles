@@ -1,14 +1,12 @@
 ! Font
-*font:			xft:GohuFont:size=8
-*boldFont:		xft:GohuFont:size=8
-
-! Create some space
-*internalBorder:	14
+*font:     xft:GohuFont:size=8 
+*boldFont: xft:GohuFont:size=8
 
 ! Enable clickable links
 *url-launcher: firefox
 
-! Scrollbar
+! Make minimal
+*internalBorder: 14
 *scrollBar: false
 
 ! Paste with Control-Shift-V
@@ -17,39 +15,44 @@
 *iso14755: False
 
 ! Colors
-*foreground:	#e1e1e1
-*background:	#2d2d2d
-*cursorColor:	#e1e1e1
+
+! Misc
+*foreground:         #dedfd5
+*background:         #3b464c
+*cursorColor:        #535e66
+*highlightColor:     #535e66
+*highlightTextColor: #cecfc5
 
 ! Black
-*color0:		#5a5a5a
-*color8:		#8c8c8c
+*color0:             #535e66
+*color8:             #677178
 
 ! Red
-*color1: 		#d0a8ab
-*color9:		#de8990
+*color1:             #f99595
+*color9:             #f3d5c9
 
 ! Green
-*color2:		#bae8d2
-*color10:		#94daa9
+*color2:             #7cbf9e
+*color10:            #a2d9b1
 
 ! Yellow
-*color3:		#e3c794
-*color11:		#c3ac82
+! Bright is too bright! 
+*color3:             #cbbd96
+*color11:            #e9e1d6
 
 ! Blue
-*color4:		#9cdbdf
-*color12:		#6cb4dd
+*color4:             #7bbac7
+*color12:            #dff0eb
 
 ! Magenta
-*color5:		#cca8c9
-*color13:		#db79bf
+! Make different from red
+*color5:             #fe8991
+*color13:            #ff99a1
 
 ! Cyan
-*color6:		#9ad4c8
-*color14:		#59b0b2
-
+*color6:             #44b5b1
+*color14:            #9ed9d8
 
 ! White
-*color7:		#f0f0f0
-*color15:		#e1e1e1
+*color7:             #f2f1b9
+*color15:            #f6f6c9
