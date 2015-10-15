@@ -1,6 +1,6 @@
 #!/bin/sh
 
-bspc config border_width        0
+bspc config border_width        8
 bspc config window_gap          18
 
 bspc config normal_border_color   "#EEEEEE"
@@ -15,3 +15,9 @@ bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 
 bspc config top_padding 24
+
+
+# Enable floating for album covers
+bspc rule -a "*" border=off
+bspc rule -a feh floating=on
+bspc rule -a feh border=on
