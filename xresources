@@ -1,6 +1,6 @@
 ! Font
-*font:     xft:GohuFont:size=8 
-*boldFont: xft:GohuFont:size=8
+*font:     xft:Inconsolata:size=10 
+*boldFont: xft:Inconsolata:size=10
 
 ! Enable clickable links
 *url-launcher: firefox
@@ -8,11 +8,6 @@
 ! Make minimal
 *internalBorder: 14
 *scrollBar: false
-
-! Paste with Control-Shift-V
-*keysym.Shift-Control-V: perl:clipboard:paste
-*perl-ext-common: default,clipboard
-*iso14755: False
 
 ! Colors
 
@@ -56,3 +51,8 @@
 ! White
 *color7:             #f2f1b9
 *color15:            #f6f6c9
+
+! Paste with Control-Shift-V
+*keysym.Shift-Control-V: perl:clipboard:paste
+*perl-ext-common: default,clipboard
+*iso14755: False

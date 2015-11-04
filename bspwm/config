@@ -14,10 +14,6 @@ bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 
-bspc config top_padding 24
+bspc config top_padding 15
 
-
-# Enable floating for album covers
-bspc rule -a "*" border=off
-bspc rule -a feh floating=on
-bspc rule -a feh border=on
+bspc rule -a "*" border off

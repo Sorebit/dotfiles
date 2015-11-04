@@ -36,6 +36,14 @@ super + !button{1-3}
 super + @button{1-3}
     bspc pointer -u
 
+# Sound bindings
+
+{XF86AudioMute, XF86AudioLowerVolume, XF86AudioRaiseVolume}
+	sound {mute, down, up}
+
+{XF86MonBrightnessDown, XF86MonBrightnessUp}
+	brightness {down, up}
+
 # Scrot desktop
 super + Print
 	screenshot
@@ -48,9 +56,9 @@ super + shift + Print
 super + Return
 	urxvt
 
-# Spawn dmenu
+# Spawn run menu
 super + d
-	dmenu_run
+	run
 
 # Spawn firefox
 super + b
