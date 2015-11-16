@@ -12,16 +12,19 @@ desktop() {
 	
 	case "$current" in
 	1)
-		printf "%%{F#$blk}\u2022%%{F#$gre}  \u2022  \u2022  \u2022"
+		printf "%%{F#$blk}\u2022%%{F#$gre}  \u2022  \u2022  \u2022  \u2022"
 		;;
 	2)
-		printf "\u2022%%{F#$blk}  \u2022%%{F#$gre}  \u2022  \u2022"
+		printf "\u2022%%{F#$blk}  \u2022%%{F#$gre}  \u2022  \u2022  \u2022"
 		;;
 	3)
-		printf "\u2022  \u2022%%{F#$blk}  \u2022%%{F#$gre}  \u2022"
+		printf "\u2022  \u2022%%{F#$blk}  \u2022%%{F#$gre}  \u2022  \u2022"
 		;;
 	4)
-		printf "\u2022  \u2022  \u2022%%{F#$blk}  \u2022%%{F#$gre}"
+		printf "\u2022  \u2022  \u2022%%{F#$blk}  \u2022%%{F#$gre}  \u2022"
+		;;
+	5)
+		printf "\u2022  \u2022  \u2022  \u2022%%{F#$blk}  \u2022%%{F#$gre}"
 		;;
 	esac
 }

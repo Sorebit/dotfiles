@@ -15,12 +15,12 @@ super + {_,shift + }{Left, Down, Up, Right}
 	bspc window -{f,s} {left, down, up, right}
 
 # Change desktop
-super + {1-4}
-	bspc desktop -f ^{1-4}
+super + {1-5}
+	bspc desktop -f ^{1-5}
 
 # Move window to dekstop
-super + shift + {1-4}
-	bspc window -d ^{1-4}
+super + shift + {1-5}
+	bspc window -d ^{1-5}
 
 # Focus a window using mouse
 ~button1
