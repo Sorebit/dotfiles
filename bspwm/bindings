@@ -7,12 +7,16 @@ super + q
 	bspc window -c
 
 # Make window float or fullscreen
-super + {s, f}
-	bspc window -t {floating, fullscreen}
+super + {s, f, p}
+	bspc window -t {floating, fullscreen, pseudo_tiled}
 
 # Switch focused window
 super + {_,shift + }{Left, Down, Up, Right}
 	bspc window -{f,s} {left, down, up, right}
+
+# Rotate the tree
+super + r
+	bspc desktop -R 90
 
 # Change desktop
 super + {1-5}
@@ -54,7 +58,7 @@ super + shift + Print
 
 # Spawn urxvt
 super + Return
-	urxvt
+	urxvtc
 
 # Spawn run menu
 super + d

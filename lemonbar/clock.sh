@@ -48,4 +48,4 @@ while true; do
 	sleep 0.15
 done |
 
-lemonbar -g 160x32+1760+0 -F \#$fg -B \#00$bg -f "System San Francisco Display:size=13" -f "FontAwesome:size=15" | bash
+lemonbar -g 154x32+1766+0 -F \#$fg -B \#00$bg -f "System San Francisco Display:size=13" -f "FontAwesome:size=15" | bash
