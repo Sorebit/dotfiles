@@ -6,6 +6,7 @@
 bg="e0e0e0"
 gre="707070"
 blk="202020"
+alt="f96559"
 
 clock() {
 	date +"%a %H:%M"
@@ -22,7 +23,7 @@ battery() {
 	fi
 
 	if [ $bat -lt 10 ]; then
-		printf "%%{F#f96559}\uf244%%{F#$blk}"
+		printf "%%{F#$alt}\uf244%%{F#$blk}"
 	elif [ $bat -le 25 ]; then
 		printf "\uf243"
 	elif [ $bat -le 50 ]; then
@@ -48,4 +49,4 @@ while true; do
 	sleep 0.15
 done |
 
-lemonbar -g 154x32+1766+0 -F \#$fg -B \#00$bg -f "System San Francisco Display:size=13" -f "FontAwesome:size=15" | bash
+lemonbar -g 164x32+1756+0 -f "System San Francisco Display:size=13" -f "FontAwesome:size=15" | bash

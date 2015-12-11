@@ -1,5 +1,5 @@
 ! Font
-*font:     xft:Inconsolata:size=10 
+*font:     xft:Inconsolata:size=10
 *boldFont: xft:Inconsolata:size=10
 
 ! Enable clickable links
