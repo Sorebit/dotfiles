@@ -34,7 +34,7 @@ while true; do
 
 	echo "%{B#00$bg}%{F#$gre}   $desktop   %{F#$blk}"
 	
-	sleep 0.15
+	sleep 0.3
 done |
 
-lemonbar -g 100x32+0+0 -F \#$blk -B \#00$bg -f "System San Francisco Display:size=15" | bash
+lemonbar -g 140x32+0+0 -F \#$blk -B \#00$bg -f "System San Francisco Display:size=15" | bash

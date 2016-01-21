@@ -30,7 +30,7 @@ hi ModeMsg      ctermfg=none
 hi MoreMsg      ctermfg=none
 hi Error        ctermfg=red    ctermbg=none
 
-hi Todo         ctermfg=red
+hi Todo         ctermfg=none ctermbg=0
 hi Cursor       ctermfg=0 ctermbg=8
 hi Search       ctermfg=0 ctermbg=9
 hi IncSearch    ctermfg=0 ctermbg=9
@@ -43,6 +43,7 @@ hi VertSplit    ctermfg=blue ctermbg=blue
 
 hi CursorLine   cterm=none ctermbg=none ctermfg=none
 hi CursorLineNr cterm=none ctermbg=none ctermfg=8
+hi MatchParen   cterm=none ctermbg=0    ctermfg=12
 
 hi Visual term=reverse ctermfg=white ctermbg=black
 

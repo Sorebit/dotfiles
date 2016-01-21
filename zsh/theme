@@ -1,4 +1,6 @@
-function get_pwd(){
+# vim:ft=zsh ts=2 sw=2 sts=2
+
+function get_pwd() {
   git_root=$PWD
   while [[ $git_root != / && ! -e $git_root/.git ]]; do
     git_root=$git_root:h
@@ -13,7 +15,11 @@ function get_pwd(){
   echo $prompt_short_dir
 }
 
-PROMPT='%{$fg[magenta]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%}'
+function root() {
+	[[ $UID -eq 0 ]] && echo "%{$reset_colors%}root "
+}
+
+PROMPT='$(root)%{$fg[magenta]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "

@@ -44,9 +44,9 @@ while true; do
 	echo "%{B#00$bg}%{F#$blk}\
 	%{l}%{A:bash battery & disown:}$battery   %{A}\
 	%{c} $clock  \
-	%{r}%{A:bash run & disown:}$run  %{A}"
+	%{r}%{A:bash todo & disown:}$run  %{A}"
 	
-	sleep 0.15
+	sleep 30
 done |
 
-lemonbar -g 164x32+1756+0 -f "System San Francisco Display:size=13" -f "FontAwesome:size=15" | bash
+lemonbar -g 164x32+1756+0 -f "System San Francisco Display:style=UltraLight:size=12" -f "FontAwesome:size=15" | bash

@@ -32,6 +32,9 @@ urxvtd -q -o -f
 $HOME/.lemonbar/launcher.sh & disown
 applets &
 
+# Lock screen
+lock &
+
 # Start bspwm
 sxhkd &
 exec bspwm
