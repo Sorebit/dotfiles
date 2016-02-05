@@ -47,12 +47,12 @@ hi MatchParen   cterm=none ctermbg=0    ctermfg=12
 
 hi Visual term=reverse ctermfg=white ctermbg=black
 
-hi DiffChange   ctermbg=darkGreen ctermfg=black
+hi DiffChange   ctermbg=darkGreen  ctermfg=black
 hi DiffText     ctermbg=lightGreen ctermfg=black
-hi DiffAdd      ctermbg=blue ctermfg=black
-hi DiffDelete   ctermbg=cyan ctermfg=black
+hi DiffAdd      ctermbg=blue       ctermfg=black
+hi DiffDelete   ctermbg=cyan       ctermfg=black
 
 hi Folded       ctermbg=yellow ctermfg=black
-hi FoldColumn   ctermbg=gray ctermfg=black
+hi FoldColumn   ctermbg=gray   ctermfg=black
 hi cIf0         ctermfg=gray
 

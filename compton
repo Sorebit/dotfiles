@@ -12,7 +12,7 @@ glx-swap-method = "undefined";
 menu-opacity = 1;
 inactive-opacity = 1;
 active-opacity = 1;
-frame-opacity = 0.8;
+frame-opacity = 0.5;
 inactive-opacity-override = false;
 alpha-step = 0.06;
  
