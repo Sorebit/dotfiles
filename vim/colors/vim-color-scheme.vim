@@ -14,13 +14,13 @@ hi Normal       ctermfg=none
 hi NonText      ctermfg=none
 hi comment      ctermfg=8
 hi constant     ctermfg=green
-hi identifier   ctermfg=magenta
-hi statement    ctermfg=darkmagenta 
-hi preproc      ctermfg=darkmagenta
-hi type         ctermfg=darkmagenta 
+hi identifier   ctermfg=red
+hi statement    ctermfg=red 
+hi preproc      ctermfg=red
+hi type         ctermfg=red 
 hi special      ctermfg=darkblue
 hi Underlined   ctermfg=blue cterm=underline
-hi label        ctermfg=darkmagenta
+hi label        ctermfg=darkred
 hi operator     ctermfg=magenta
 hi Function     ctermfg=blue
 

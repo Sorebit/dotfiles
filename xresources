@@ -13,44 +13,42 @@
 
 ! Misc
 *foreground:         #dedfd5
-*background:         #3b464c
-*cursorColor:        #535e66
-*highlightColor:     #535e66
-*highlightTextColor: #cecfc5
+*background:         #2b303b
+*cursorColor:        #465159
+*highlightColor:     #465159
+*highlightTextColor: #bebfb5
 
 ! Black
-*color0:             #636e76
-*color8:             #677178
+*color0:             #56636d
+*color8:             #6a7a86
 
 ! Red
-*color1:             #f99595
-*color9:             #f3d5c9
+*color1:             #b65d64
+*color9:             #e3747d
 
 ! Green
-*color2:             #7cbf9e
-*color10:            #a2d9b1
+*color2:             #9bb989
+*color10:            #abcc97
 
 ! Yellow
-! Bright is too bright! 
-*color3:             #cbbd96
-*color11:            #e9e1d6
+*color3:             #efc97a
+*color11:            #c87f66
 
 ! Blue
-*color4:             #7bbac7
-*color12:            #dff0eb
+*color4:             #7d96ad
+*color12:            #97b6d2
 
 ! Magenta
-! Make different from red
-*color5:             #fe8991
-*color13:            #ff99a1
+*color5:             #ab8ba9
+*color13:            #8a7489
 
-! Cyan
-*color6:             #44b5b1
-*color14:            #9ed9d8
+! Cyan weird
+*color6:             #70b6a8
+*color14:            #79c4b5
 
-! White
-*color7:             #f2f1b9
-*color15:            #f6f6c9
+! White weird
+*color7:             #b4b9c3
+*color15:            #dedfd5
 
 ! Paste with Control-Shift-V
 *keysym.Shift-Control-V: perl:clipboard:paste

@@ -23,7 +23,7 @@ xset +fp /usr/share/fonts/Microsoft
 xsetroot -cursor_name left_ptr &
 
 # Set wallpaper
-wallshuf
+wallpaper
 
 # Start urxvt daemon
 urxvtd -q -o -f

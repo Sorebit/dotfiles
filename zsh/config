@@ -3,10 +3,10 @@ export ZSH=/home/sorbet/.oh-my-zsh
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export BROWSER="firefox"
 export EDITOR="vim"
-export TERMINAL="urxvt"
+export TERMINAL="urxvtc"
 
 # Plugins 
-plugins=(git)
+plugins=(git sublime archlinux)
 
 # Vim fix
 stty -ixon
@@ -35,13 +35,13 @@ zmodload zsh/terminfo
 
 # Aliases
 alias ls="ls --color=auto"
-alias l="ls -l && echo xx called l"
-alias la="ls -lAFh && echo xx called la"
-alias lr="ls -tRFh && echo xx called lr"
-alias lt="ls -ltFh && echo xx called lt"
-alias ldot="ls -ld .* && echo xx called ldot"
-alias lart="ls -1Fcart && echo xx called lart"
-alias lrt="ls -1Fcrt && echo xx called lrt"
+alias l="ls -l"
+alias la="ls -lAFh "
+alias lr="ls -tRFh "
+alias lt="ls -ltFh "
+alias ldot="ls -ld .*"
+alias lart="ls -1Fcart"
+alias lrt="ls -1Fcrt"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -52,6 +52,7 @@ alias wn="nmcli dev wifi connect"
 
 alias cl="clear"
 alias rmf="rm -rf"
+alias fehf="feh --force-alias"
 function mkcd() { mkdir -p $1; cd $1 }
 
 source $ZSH/oh-my-zsh.sh

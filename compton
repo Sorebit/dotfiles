@@ -43,7 +43,7 @@ shadow-green = 0.1;     # Green color value of shadow. (0.0 - 1.0, defaults to 0
 shadow-blue = 0.1;      # Blue color value of shadow. (0.0 - 1.0, defaults to 0)
 shadow-exclude = [ ];
 shadowignore-shaped = true;
- 
+
 # Other
 # Mark all non-WM but override-redirect windows active (e.g. menus).
 mark-ovredir-focused = true;
@@ -75,7 +75,7 @@ sw-opti = false;
 # Unredirect all windows if a full-screen opaque window is detected, to maximize performance for full-screen windows, like games.
 # Known to cause flickering when redirecting/unredirecting windows.
 # paint-on-overlay may make the flickering less obvious.
-unredir-if-possible = true;
+unredir-if-possible = false;
  
 # Specify a list of conditions of windows that should always be considered focused.
 focus-exclude = [ ];
@@ -89,5 +89,5 @@ detect-client-leader = true;
 # Window type settings
 wintypes:
 {
-    tooltip = { fade = true; shadow = false; opacity = 0.85; focus = true; };
+    tooltip = { fade = true; shadow = false; opacity = 1.0; focus = true; };
 };
