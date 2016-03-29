@@ -16,9 +16,8 @@ bspc config focus_by_distance   true
 
 bspc config top_padding 14
 
-bspc rule -a "feh" floating=on
-bspc rule -a "gimp" floating=on
 bspc rule -a Firefox desktop=^1
+bspc rule -a Subl3 border=off desktop=^2
+bspc rule -a Gimp floating=on desktop=^4
 bspc rule -a Steam desktop=^5 floating=on border=off
-bspc rule -a "subl3" border=off
-bspc rule -a "urxvt" border=off
+bspc rule -a URxvt border=off

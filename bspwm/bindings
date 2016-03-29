@@ -2,39 +2,39 @@
 super + shift + e
 	sesmgr
 
-# Close window
+# Close node
 super + q
-	bspc window -c
+	bspc node -c
 
-# Make window float or fullscreen
-super + {s, f, p}
-	bspc window -t {floating, fullscreen, pseudo_tiled}
+# Toggle node state
+super + {p, shift + p, s, f}
+    bspc node -t '~{tiled,pseudo_tiled,floating,fullscreen}'
 
-# Switch focused window
+# Switch focused node
 super + {_,shift + }{Left, Down, Up, Right}
-	bspc window -{f,s} {left, down, up, right}
+	bspc node -{f,s} {west, south, north, east}
 
 # Preselect the direction
 super + ctrl + {Left, Down, Up, Right}
-	bspc window -p {left, down, up, right}
+	bspc node -p {west, south, north, east}
 
 # Cancel the preselection for the focused desktop
-super + ctrl + Return
-	bspc query -N -d | xargs -I id -n 1 bspc window id -p cancel
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Rotate the tree
 super + r
-	bspc desktop -R 90
+	bspc node @/ -R 90
 
 # Change desktop
 super + {1-5}
 	bspc desktop -f ^{1-5}
 
-# Move window to dekstop
+# Move node to dekstop
 super + shift + {1-5}
-	bspc window -d ^{1-5}
+	bspc node -d ^{1-5}
 
-# Focus a window using mouse
+# Focus a node using mouse
 ~button1
 	bspc pointer -g focus
 
