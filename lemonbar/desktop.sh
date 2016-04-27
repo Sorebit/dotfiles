@@ -4,8 +4,8 @@
 # Sorbet, https://github.com/Sorebit 
 
 bg="#00e0e0e0"
-gre="#707070"
-blk="#202020"
+gre="#9997ba"
+blk="#373737"
 
 xdesktop -s |
 while read active; do

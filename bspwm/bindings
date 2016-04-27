@@ -19,7 +19,7 @@ super + ctrl + {Left, Down, Up, Right}
 	bspc node -p {west, south, north, east}
 
 # Cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + ctrl + Return
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Rotate the tree
@@ -73,7 +73,7 @@ super + Return
 
 # Spawn run menu
 super + d
-	run -show run
+	rofi -show run
 
 # Spawn firefox
 super + b

@@ -4,7 +4,7 @@
 # Sorbet, https://github.com/Sorebit 
 
 bg="e0e0e0"
-gre="707070"
+ico="373737"
 blk="202020"
 alt="f96559"
 
@@ -41,10 +41,10 @@ while true; do
 	clock="$(clock)"
 	run="$(printf "\uf036")"
 	
-	echo "%{B#00$bg}%{F#$blk}\
+	echo "%{B#00$bg}%{F#$ico}\
 	%{l}%{A:bash battery & disown:}$battery   %{A}\
-	%{c} $clock  \
-	%{r}%{A:bash todo & disown:}$run  %{A}"
+	%{c}%{F#$blk} $clock  \
+	%{r}%{F#$ico}%{A:bash todo & disown:}$run  %{A}"
 	
 	sleep 30
 done |
