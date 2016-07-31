@@ -15,11 +15,11 @@
 
 
 /* Comment these lines to have normal tab width */
-
+/*
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
     min-width: 10px !important;
     max-width: 100% !important;
-}
+}*/
 
 /* Removes ugly cloud thing */
 #TabsToolbar:not(:-moz-lwtheme)::after {
@@ -63,11 +63,11 @@
     text-shadow: 0 0 4px rgba(80,80,80,.2) !important;
     padding: 4px 0px !important;
     border-radius: 0px !important;
-    background: rgba(240,240,240,1) !important;
+    background: rgba(251,251,251,1) !important;
     background-clip: padding-box !important;
     transition: all .1s !important;
     margin-left: 0px !important;
-    color: rgb(120,120,120) !important;
+    color: rgba(120,120,120, 0.6) !important;
     font-family: 'SFNS Display' !important;
     font-size: 13px !important;
     border-color: #c8c8c8 !important;
