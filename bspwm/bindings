@@ -11,10 +11,16 @@ super + {p, shift + p, s, f}
     bspc node -t '~{tiled,pseudo_tiled,floating,fullscreen}'
 
 # Switch focused node
+super + {_,shift + }{j, k, l, semicolon}
+	bspc node -{f,s} {west, south, north, east}
+# Alternatively use arrow keys
 super + {_,shift + }{Left, Down, Up, Right}
 	bspc node -{f,s} {west, south, north, east}
 
 # Preselect the direction
+super + ctrl + {j, k, l, semicolon}
+	bspc node -p {west, south, north, east}
+# Alternatively use arrow keys
 super + ctrl + {Left, Down, Up, Right}
 	bspc node -p {west, south, north, east}
 
@@ -56,7 +62,7 @@ super + @button{1-3}
 	brightness {down, up}
 
 # Lock screen
-super + l
+super + o
 	lock
 
 # Scrot desktop

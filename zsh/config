@@ -51,9 +51,8 @@ alias wl="nmcli dev wifi list"
 alias wn="nmcli dev wifi connect"
 
 alias cl="clear"
-alias rf="rm -rf"
 alias fehf="feh --force-alias"
-function mkcd() { mkdir -p $1; cd $1 }
+function mkcd() { mkdir -p ./$1; cd ./$1 }
 
 source $ZSH/oh-my-zsh.sh
 

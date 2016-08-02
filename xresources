@@ -13,7 +13,8 @@
 
 ! Misc
 *foreground:         #dedfd5
-*background:         #2b303b
+*background:         #24242c 
+! #2b303b
 *cursorColor:        #465159
 *highlightColor:     #465159
 *highlightTextColor: #bebfb5
@@ -51,12 +52,15 @@
 *color15:            #dedfd5
 
 ! Paste with Control-Shift-V
-*keysym.Shift-Control-V: perl:clipboard:paste
-*perl-ext-common: default,clipboard
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.perl-ext-common: default,clipboard,resize-font
+URxvt.resize-font.smaller: C-minus
+URxvt.resize-font.bigger: C-equal
+URxvt.resize-font.reset: C-plus
+URxvt.resize-font.show: C-question
 *iso14755: False
 
 ! Rofi
-
 rofi.font: System San Francisco Display 15
 rofi.width: 100
 rofi.padding: 480
