@@ -46,7 +46,7 @@ while true; do
 	%{c}%{F#$blk} $clock  \
 	%{r}%{F#$ico}%{A:bash todo & disown:}$run  %{A}"
 	
-	sleep 30
+	sleep 15
 done |
 
 lemonbar -g 164x32+1756+0 -f "System San Francisco Display:style=UltraLight:size=12" -f "FontAwesome:size=15" | bash
