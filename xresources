@@ -2,9 +2,6 @@
 *font:     xft:Inconsolata:size=10
 *boldFont: xft:Inconsolata:size=10
 
-! Enable clickable links
-*url-launcher: firefox
-
 ! Make minimal
 *internalBorder: 14
 *scrollBar: false
@@ -51,14 +48,23 @@
 *color7:             #b4b9c3
 *color15:            #dedfd5
 
+! Extensions
+URxvt.perl-lib:        /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,clipboard,matcher,resize-font
+
 ! Paste with Control-Shift-V
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.perl-ext-common: default,clipboard,resize-font
 URxvt.resize-font.smaller: C-minus
 URxvt.resize-font.bigger: C-equal
 URxvt.resize-font.reset: C-plus
 URxvt.resize-font.show: C-question
 *iso14755: False
+
+! Enable clickable links
+URxvt.url-launcher:             /usr/bin/firefox
+URxvt.matcher.button:      1
+URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
 
 ! Rofi
 rofi.font: System San Francisco Display 15
