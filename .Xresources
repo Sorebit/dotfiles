@@ -14,7 +14,7 @@
 ! #2b303b
 *cursorColor:        #465159
 *highlightColor:     #465159
-*highlightTextColor: #bebfb5
+*highlightTextColor: #dedfd5
 
 ! Black
 *color0:             #56636d

@@ -29,7 +29,7 @@ wallpaper
 urxvtd -q -o -f
 
 # FIX STARTUP FLICKER
-$HOME/.lemonbar/launcher.sh & disown
+$HOME/.config/lemonbar/launcher.sh & disown
 applets &
 
 # Lock screen

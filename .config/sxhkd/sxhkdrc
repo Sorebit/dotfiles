@@ -83,7 +83,8 @@ super + Print
 
 # Spawn urxvt
 super + Return
-	urxvtc
+	gnome-terminal
+	#urxvtc
 
 # Spawn run menu
 super + d

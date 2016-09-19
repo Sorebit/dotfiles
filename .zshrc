@@ -3,7 +3,7 @@ export ZSH=/home/sorbet/.oh-my-zsh
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export BROWSER="firefox"
 export EDITOR="vim"
-export TERMINAL="urxvtc"
+export TERMINAL="gnome-terminal"
 
 # Plugins 
 plugins=(git sublime archlinux)
