@@ -11,7 +11,7 @@
 ! Misc
 *foreground:         #dedfd5
 *background:         #222326
-! #2b303b
+
 *cursorColor:        #465159
 *highlightColor:     #465159
 *highlightTextColor: #dedfd5
@@ -67,15 +67,15 @@ URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 
 ! Rofi
-rofi.font: System San Francisco Display 15
-rofi.width: 100
-rofi.padding: 480
-rofi.opacity: 90
+rofi.font: System San Francisco Display 14
+rofi.width: 40
+rofi.padding: 18
+rofi.opacity: 100
 rofi.hide-scrollbar: true
-rofi.eh: 2
-rofi.lines: 3
+rofi.eh: 1
+rofi.lines: 7
 rofi.color-enabled: true
-rofi.color-window: #2b303b, #2b303b, #2b303b
-rofi.color-normal: #2b303b, #dedfd5, #2b303b, #2b303b, #97b6d2
-rofi.color-active: #2b303b, #9bb989, #2b303b, #2b303b, #9bb989
-rofi.color-urgent: #2b393b, #b65d64, #2b303b, #2b303b, #b65d64e
+rofi.color-window: #232830, #232830, #232830
+rofi.color-normal: #232830, #6d7d8a, #232830, #3b454f, #e4e6db
+rofi.color-active: #232830, #9bb989, #232830, #232830, #9bb989
+rofi.color-urgent: #232830, #b65d64, #232830, #232830, #b65d64
