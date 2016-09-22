@@ -15,18 +15,8 @@ fi
 # Fading
 compton -o 0.3 --backend glx --vsync opengl -b -i 1.0 --config ~/.config/compton.conf
 
-# Fonts
-xset +fp $HOME/.fonts
-xset +fp /usr/share/fonts/Microsoft
-
-# Fix cursor
-xsetroot -cursor_name left_ptr &
-
 # Set wallpaper
 wallpaper
-
-# Start urxvt daemon
-urxvtd -q -o -f
 
 # FIX STARTUP FLICKER
 $HOME/.config/lemonbar/launcher.sh & disown
@@ -35,6 +25,21 @@ applets &
 # Lock screen
 lock &
 
+# Fonts
+xset +fp $HOME/.fonts
+xset +fp /usr/share/fonts/Microsoft
+
+# Fix cursor
+xsetroot -cursor_name left_ptr &
+
+# Start urxvt daemon
+urxvtd -q -o -f
+
 # Start bspwm
 sxhkd &
 exec bspwm
+
+xrandr --output eDP1 --auto --primary --rotate left 
+
+# Todo - enable double monitors
+#xrandr --output HDMI --auto --right-of eDP1 --rotate left
