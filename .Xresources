@@ -77,5 +77,5 @@ rofi.lines: 7
 rofi.color-enabled: true
 rofi.color-window: #232830, #232830, #232830
 rofi.color-normal: #232830, #6d7d8a, #232830, #3b454f, #e4e6db
-rofi.color-active: #232830, #9bb989, #232830, #232830, #9bb989
+rofi.color-active: #232830, #9bb989, #232830, #3b454f, #abcc97
 rofi.color-urgent: #232830, #b65d64, #232830, #232830, #b65d64

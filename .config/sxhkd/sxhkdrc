@@ -1,18 +1,16 @@
 ### Monitors ###
 
-# Todo - enable double monitors
-# Change monitor
+# Todo
 
 ### Desktops ###
 
 # Change desktop
-super + {1-5}
-	bspc desktop -f ^{1-5}
+super + {1-9}
+	bspc desktop -f ^{1-9}
 
 # Move node to dekstop
-super + shift + {1-5}
-	bspc node -d ^{1-5}
-
+super + shift + {1-9}
+	bspc node -d ^{1-9}
 
 ### Nodes ###
 
@@ -56,9 +54,6 @@ super + r
 # Move and resize floats using mouse
 super + button{1-3}
     bspc pointer -g {move,resize_side,resize_corner}
-
-super + !button{1-3}
-    bspc pointer -t %i %i
 
 super + @button{1-3}
     bspc pointer -u
