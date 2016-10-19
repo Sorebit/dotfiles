@@ -15,7 +15,7 @@ stty -ixon
 export ZSH_THEME="sorbet"
 autoload -U colors && colors
 export GCC_COLORS=1
-# Default colors fix
+# Gnome-terminal default colors fix
 export LS_COLORS=""
 
 ## Completion & correction
@@ -56,3 +56,4 @@ alias fehf="feh --force-alias"
 function mkcd() { mkdir -p ./$1; cd ./$1 }
 
 source $ZSH/oh-my-zsh.sh
+
