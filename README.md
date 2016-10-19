@@ -1,18 +1,10 @@
-## Configuration files (Not all actually have a dot)
+## Configuration files
 
-### Window management and overall looks:
-- [bspwm](https://github.com/Sorebit/dotfiles/tree/master/.config/bspwm)
-- [lemonbar](https://github.com/Sorebit/dotfiles/tree/master/.config/lemonbar)
-- [sxhkd](https://github.com/Sorebit/dotfiles/tree/master/.config/sxhkd)
-- [compton](https://github.com/Sorebit/dotfiles/blob/master/.config/compton.conf)
-  
 ### Terminal and shell:
-- [gnome-terminal](https://github.com/Sorebit/dotfiles/blob/master/gnome-terminal.conf) (using [term-prof](https://github.com/Sorebit/bin/blob/master/cpdot) to load and dump profiles) (urxvt is broken)
-- [zsh](https://github.com/Sorebit/dotfiles/blob/master/.zshrc) + [oh-my-zsh](https://github.com/Sorebit/dotfiles/tree/master/.oh-my-zsh/themes)
+- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](https://github.com/Sorebit/bin/blob/master/ter-prof) to load and dump profiles) (urxvt is broken)
+- [zsh](/.zshrc) + [oh-my-zsh](/.oh-my-zsh/themes)
 
 ### Editors:
-- [Vim](https://github.com/Sorebit/dotfiles/blob/master/.vimrc)
-- Sublime Text 3
+- [Vim](/.vimrc)
+- [Sublime Text 3](/.config/sublime-text-3/Packages/User/Preferences.sublime-settings)
 
-### Miscellaneous:
-- [Touchpad synaptics](https://github.com/Sorebit/dotfiles/blob/master/70-synaptics.conf)
