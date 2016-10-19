@@ -1,7 +1,7 @@
 ## Configuration files
 
 ### Terminal and shell:
-- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](https://github.com/Sorebit/bin/blob/master/ter-prof) to load and dump profiles) (urxvt is broken)
+- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](https://github.com/Sorebit/bin/blob/master/term-prof) to load and dump profiles) (urxvt is broken)
 - [zsh](/.zshrc) + [oh-my-zsh](/.oh-my-zsh/themes)
 
 ### Editors:
