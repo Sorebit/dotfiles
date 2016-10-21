@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+semicolon"], "command": "next_view" },
+	{ "keys": ["ctrl+'"], "command": "prev_view" },
+
+]
