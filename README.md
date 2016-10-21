@@ -6,5 +6,5 @@
 
 ### Editors:
 - [Vim](/.vimrc)
-- [Sublime Text 3](/.config/sublime-text-3/Packages/User/Preferences.sublime-settings)
+- [Sublime Text 3](/.config/sublime-text-3/Packages/User)
 
