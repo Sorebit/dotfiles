@@ -1,0 +1,4 @@
+# Fix autosuspending mouse
+echo '2' > /sys/bus/usb/devices/1-2/power/autosuspend;
+echo 'on' > /sys/bus/usb/devices/1-2/power/level;
+
