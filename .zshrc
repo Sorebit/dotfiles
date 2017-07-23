@@ -1,12 +1,10 @@
 ## Global variables
 export ZSH=/home/sorbet/.oh-my-zsh
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export BROWSER="firefox"
+export BROWSER="chromium-browser"
 export EDITOR="vim"
 export TERMINAL="gnome-terminal"
-
-## Plugins 
-plugins=(git sublime fedora)
+export TODO="/home/sorbet/.todo"
 
 # Vim fix
 stty -ixon
@@ -17,6 +15,9 @@ autoload -U colors && colors
 export GCC_COLORS=1
 # Gnome-terminal default colors fix
 export LS_COLORS=""
+
+## Plugins 
+plugins=(git sublime fedora zsh-autosuggestions history-substring-search)
 
 ## Completion & correction
 autoload -U compinit && compinit
@@ -56,4 +57,3 @@ alias fehf="feh --force-alias"
 function mkcd() { mkdir -p ./$1; cd ./$1 }
 
 source $ZSH/oh-my-zsh.sh
-

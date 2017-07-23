@@ -1,12 +1,10 @@
 {
-	// Depends on package "Theme - Spacegray"
 	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"font_face": "Inconsolata",
-	"font_size": 10,
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	// Depends on package "Theme - Spacegray"
 	"theme": "Spacegray.sublime-theme"
 }

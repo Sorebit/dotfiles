@@ -1,5 +1,5 @@
 [
 	{ "keys": ["ctrl+'"], "command": "next_view" },
 	{ "keys": ["ctrl+semicolon"], "command": "prev_view" },
-
+	{ "keys": ["ctrl+alt+t"], "command": "open_terminal" }
 ]
