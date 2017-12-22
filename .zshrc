@@ -3,8 +3,6 @@ export ZSH=/home/sorbet/.oh-my-zsh
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export BROWSER="chromium-browser"
 export EDITOR="vim"
-export TERMINAL="gnome-terminal"
-export TODO="/home/sorbet/.todo"
 
 # Vim fix
 stty -ixon

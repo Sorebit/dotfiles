@@ -1,10 +1,12 @@
 {
 	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"default_line_ending": "unix",
 	"font_face": "Inconsolata",
 	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"theme": "Spacegray.sublime-theme"
+	"theme": "Spacegray.sublime-theme",
+	"rulers": [100],
 }
