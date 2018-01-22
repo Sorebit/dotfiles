@@ -1,11 +1,9 @@
+" Pretty much copied from https://github.com/onodera-punpun
 " Enable syntax
 syntax on
 
 " Make vim modern
 set nocompatible
-
-" Disable custom vim title
-set titlestring=URxvt\ [vim\ %F]
 
 " Make vim pleby
 let g:cua_mode = 3
@@ -64,5 +62,5 @@ set matchtime=2
 set autoread
 set backspace=indent,eol,start
 
-" Colorscheme TODO
+" Colorscheme
 colorscheme vim-color-scheme

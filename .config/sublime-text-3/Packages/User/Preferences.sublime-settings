@@ -7,6 +7,9 @@
 	[
 		"Vintage"
 	],
-	"theme": "Spacegray.sublime-theme",
-	"rulers": [100],
+	"rulers":
+	[
+		100
+	],
+	"theme": "Spacegray.sublime-theme"
 }
