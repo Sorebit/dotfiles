@@ -11,5 +11,8 @@
 	[
 		100
 	],
-	"theme": "Spacegray.sublime-theme"
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false"
 }
