@@ -1,4 +1,8 @@
-# vim:ft=zsh ts=2 sw=2 sts=2
+local ret_status="%(?:%{$reset_color%}>:%{$fg_bold[red]%}>)"
+
+function root() {
+  [[ $UID -eq 0 ]] && echo "%{$reset_colors%}root "
+}
 
 function get_pwd() {
   git_root=$PWD
@@ -15,13 +19,9 @@ function get_pwd() {
   echo $prompt_short_dir
 }
 
-function root() {
-	[[ $UID -eq 0 ]] && echo "%{$reset_colors%}root "
-}
+PROMPT='$(root)${ret_status} %{$fg_bold[blue]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}'
 
-PROMPT='$(root)%{$fg[blue]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%}'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}git:"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}git:("
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}+%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=") %{$fg_bold[red]%}+"
+ZSH_THEME_GIT_PROMPT_CLEAN=")"
