@@ -1,0 +1,19 @@
+# World and autocreate
+world=/srv/terraria/Worlds/Planeta.wld
+autocreate=1
+worldpath=/srv/terraria/Worlds
+worldname=AutocreatedWorld
+difficulty=0
+
+# Server options
+port=7777
+#password=
+maxplayers=8
+motd=Testowanie serwerka laptopowego
+banlist=banlist.txt
+
+# Unckecked options
+#secure=1
+#realtime=1
+#language=it/IT
+
