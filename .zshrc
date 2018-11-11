@@ -1,7 +1,7 @@
 ## Global variables
 # export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/opt/erlang@20/bin:$PATH"
+export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin"
 export EDITOR="vim"
 
 ## Prompt & colors
@@ -79,4 +79,6 @@ function mkcd() { mkdir -p ./$1; cd ./$1 }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
-
+function installAddons {
+	dnfi gnome-terminal-nautilus
+}
