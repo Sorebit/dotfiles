@@ -9,8 +9,11 @@ export ZSH_THEME="sorbet"
 autoload -U colors && colors
 export GCC_COLORS=1
 
+## Autostart tmux
+export ZSH_TMUX_AUTOSTART=true
+
 ## Plugins
-plugins=(git sublime zsh-autosuggestions history-substring-search)
+plugins=(git sublime zsh-autosuggestions history-substring-search tmux)
 
 ## OS-specific configs
 case $(uname) in
@@ -82,3 +85,4 @@ function installAutosuggestions() {
 function installAddons {
 	dnfi gnome-terminal-nautilus
 }
+
