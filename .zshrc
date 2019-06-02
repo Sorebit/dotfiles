@@ -39,6 +39,7 @@ case $(uname) in
     alias wl="nmcli dev wifi list"
     alias wn="nmcli dev wifi connect"
     alias fehf="feh --force-alias"
+    alias xo="xdg-open"
   ;;
 esac
 
