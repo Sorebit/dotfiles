@@ -9,6 +9,11 @@
 - [Vim](/.vimrc)
 - [Sublime Text 3](/.config/sublime-text-3/Packages/User)
 
+## Firefox:
+- https://github.com/theel0ja/ubo-recommendations
+- https://github.com/theel0ja/CrapBlock
+- **TODO**: user.js (maybe https://github.com/ghacksuserjs/ghacks-user.js or https://github.com/pyllyukko/user.js)
+
 ## Installation
 The file hierarchy is kept as seen from `$HOME`.
 To install just copy needed files/folders to your `$HOME`.
