@@ -40,6 +40,18 @@ case $(uname) in
     alias wn="nmcli dev wifi connect"
     alias fehf="feh --force-alias"
     alias xo="xdg-open"
+
+    # Functions
+    # Override default super+num app shortcuts
+    function fixGnomeAppShortcuts() {
+        for i in {1..9}; do
+            gsettings set "org.gnome.shell.keybindings" "switch-to-application-$i" "[]";
+        done &&
+        gsettings list-recursively | grep switch-to-application | sort;
+    }
+    function installAddons {
+        dnfi gnome-terminal-nautilus
+    }
   ;;
 esac
 
@@ -82,8 +94,5 @@ alias .....="cd ../../../.."
 function mkcd() { mkdir -p ./$1; cd ./$1 }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-}
-function installAddons {
-	dnfi gnome-terminal-nautilus
 }
 
