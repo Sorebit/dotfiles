@@ -1,8 +1,11 @@
 ## Global variables
 # export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin:$HOME/.pyenv/bin"
 export EDITOR="vim"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 ## Prompt & colors
 export ZSH_THEME="sorbet"

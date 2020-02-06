@@ -1,66 +1,88 @@
-" Pretty much copied from https://github.com/onodera-punpun
-" Enable syntax
-syntax on
-
-" Make vim modern
+" Make vim modern.
 set nocompatible
 
-" Make vim pleby
-let g:cua_mode = 3
+" Enable syntax.
+syntax on
 
-inoremap :MyTab() <C-X><C-F>
+" Disable the default Vim startup message.
+set shortmess+=I
 
-set completeopt=
-set wildmenu
-set wildmode=longest,list
-
-" Start in insert mode
-au BufRead,BufNewFile * start
-
-" Enable line numbers
+" Enable relative line numbers.
 set number
+set relativenumber
 
-" Enable intentation lines
-set list
-set listchars=tab:\┆\ 
+" Always show the status line at the bottom, even if you only have one window open.
+set laststatus=2
 
-" Hide statusbar
-set noshowmode
+" Backspace over anything.
+set backspace=indent,eol,start
 
-" Enable mouse use in all modes
-set mouse=a
+" Enable buffer hiding.
+set hidden
 
-" Lines above/below cursor
-set scrolloff=5
+" Make searching better.
+set ignorecase
+set smartcase
 
-" Stop wrapping
-set nowrap
+" Enable searching as you type, rather than waiting till you press enter.
+set incsearch
+
+" Unbind some useless/annoying default key bindings.
+nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+
+" Disable audible bell because it's annoying.
+set noerrorbells visualbell t_vb=
+
+" Enable mouse support in all modes. 
+set mouse+=a
+
+" Finally learn to use hjkl.
+" In normal mode...
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+" ...and in insert mode
+inoremap <Left>  <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up>    <ESC>:echoe "Use k"<CR>
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" Colorscheme
+colorscheme vim-color-scheme
 
 " Save position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Lines above/below cursor.
+set scrolloff=5
+
+" Longer history.
+set history=200
+
+" --------------------------------------------------------------
+" TODO: Old config territory, check again if i want to use those
+" --------------------------------------------------------------
+
+" Enable intentation lines
+" set list
+" set listchars=tab:\┆\ 
+
+" Stop wrapping
+" set nowrap
+
 " Disable backups
-set nobackup
-set nowritebackup
-set noswapfile
-set noundofile
+" set nobackup
+" set nowritebackup
+" set noswapfile
+" set noundofile
 
 " hdni stuff
-set showmatch
-set ignorecase
-set smartcase
-set incsearch
-set autowrite
-set hidden
-set tabstop=4
-set more
-set wildmenu
-set history=200
-set matchtime=2
-set autoread
-set backspace=indent,eol,start
+" set showmatch
+" set autowrite
+" set tabstop=4
+" set matchtime=2
+" set autoread
 
-" Colorscheme
-colorscheme vim-color-scheme
