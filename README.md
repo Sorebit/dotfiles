@@ -1,15 +1,17 @@
-## Configuration files
+# Dotfiles
+
+This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
 
 ### Terminal and shell:
 
-- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](https://github.com/Sorebit/bin/blob/master/term-prof) to load and dump profiles) (urxvt is broken)
-- [zsh](/.zshrc) + [oh-my-zsh](/.oh-my-zsh/themes)
-- [tmux](/.tmux.conf) (a little bit messy, but pretty usable)
+- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](/bin/term-prof) to load and dump profiles)
+- [zsh](/zshrc) + [oh-my-zsh](/oh-my-zsh/custom/themes)
+- [tmux](/tmux.conf) (a little bit messy, but pretty usable)
 
 ### Editors:
 
-- [Vim](/.vimrc)
-- [Sublime Text 3](/.config/sublime-text-3/Packages/User)
+- [Vim](/vimrc)
+- [Sublime Text 3](/.config/sublime-text-3/Packages/User) *(Ditching soon)*
 
 ### Firefox:
 
@@ -23,7 +25,7 @@
 
 ## Installation
 
-The file hierarchy is kept as seen from `$HOME`.
-To install just copy needed files/folders to your `$HOME`.
+After cloning this repo, run `./install` to automatically set up the development environment.
+Note that the install script is idempotent: it can safely be run multiple times.
 
-(I might write a script to do that in the future)
+For the color scheme to look right, you will also need to run `bin/term-prof load gnome-terminal.conf`.
