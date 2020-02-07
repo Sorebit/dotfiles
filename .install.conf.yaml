@@ -1,0 +1,21 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig:
+    ~/.oh-my-zsh/custom/themes/sorbet.zsh-theme: oh-my-zsh/custom/themes/sorbet.zsh-theme
+    ~/.tmux.conf:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zshrc:
+
+- create:
+    - ~/.vim/undo-history
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+

@@ -27,8 +27,8 @@
 [format]
   pretty = %C(yellow)%H%Creset -%C(green)%d%Creset %s %C(red)(%an, %cr)%Creset
 [user]
-  name =  # Change
-  email = # Change
+  name = Sorebit
+  email = cmbk90@gmail.com
 [color]
   ui = true
 [difftool "sourcetree"]
