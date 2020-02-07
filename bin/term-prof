@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# term-prof - load or dump gnome-terminal profile
+# sorbet, https://github.com/Sorebit
+
+# Setup
+path="/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/"
+conf="./gnome-terminal.conf"
+action=""
+
+function usage() {
+	echo "Usage: term-prof [action] [path]"
+	echo "Path defaults to './gnome-terminal.conf'"
+	echo "Supported actions:"
+	echo "  - dump: Dump profile to [path]"
+	echo "  - load: Load profile from [path]"
+	exit 1
+}
+
+if [[ $# -gt 0 ]]; then
+	action=$1
+	if [[ $action != "dump" && $action != "load" ]]; then
+		usage
+	fi
+	shift
+else
+	echo "Not enough arguments."
+	usage
+fi
+
+if [[ $# -gt 0 ]]; then
+	conf=$1
+fi
+
+# Execute
+if [[ $action = "dump" ]]; then
+	echo "Dumping profile to '$conf'"
+	dconf dump $path > $conf
+elif [[ $action = "load" ]]; then
+	echo "Loading profile from '$conf'"
+	dconf load $path < $conf
+fi

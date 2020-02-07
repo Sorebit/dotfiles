@@ -3,6 +3,8 @@ set nocompatible
 
 " Enable syntax.
 syntax on
+set showmatch
+set tabstop=4
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -28,7 +30,9 @@ set smartcase
 set incsearch
 
 " Unbind some useless/annoying default key bindings.
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+map <C-a> <Nop>
+map <C-x> <Nop>
+nmap Q <Nop>
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
@@ -48,6 +52,16 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+" Quicker window movement.
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " Colorscheme
 colorscheme vim-color-scheme
 
@@ -60,7 +74,8 @@ endif
 set scrolloff=5
 
 " Longer history.
-set history=200
+set history=8192
+
 
 " --------------------------------------------------------------
 " TODO: Old config territory, check again if i want to use those
@@ -80,9 +95,7 @@ set history=200
 " set noundofile
 
 " hdni stuff
-" set showmatch
 " set autowrite
-" set tabstop=4
 " set matchtime=2
 " set autoread
 

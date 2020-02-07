@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# screenshot - take a screenshot using scrot
+# sorbet, https://github.com/Sorebit
+
+
+# Set dir and create if doesn't exist
+dir="$HOME/Pictures/screenshots"
+mkdir -p $dir
+
+# Set name of scrot
+name="$dir/scrot"$(ls $dir | wc -l)".png"
+echo $name
+
+if [[ $# -eq 0 ]]; then
+	scrot $name
+	notify-send "Scrotted screen"
+	exit 0
+fi
+
+case "$1" in
+	-h|--help)
+		echo "Usage: screenshot [options]"
+		echo "Options:"
+		echo "-h  --help          Show this help and exit"
+		echo "-s  --selection     Scrot only active window"
+		exit 0
+		;;
+	-s|--selection)
+		scrot -u $name
+		notify-send "Scrotted selection"
+		exit 0
+		;;
+	*)
+		echo "$1 is not a valid option"
+		exit 0
+		;;
+esac

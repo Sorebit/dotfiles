@@ -1,0 +1,6 @@
+#!/bin/sh
+
+nm-applet &
+#trayer &
+stalonetray --geometry +1714+0 --slot-size 32 --icon-size 24 -t --grow-gravity E --icon-gravity E
+killall nm-applet
