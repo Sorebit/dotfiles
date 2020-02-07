@@ -32,4 +32,4 @@ For the color scheme to look right, you will also need to run `bin/term-prof loa
 
 ## License
 
-Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE][/LICENSE] for details.
+Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
