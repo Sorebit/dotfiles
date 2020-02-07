@@ -1,10 +1,22 @@
 " Make vim modern.
 set nocompatible
 
+"------------------
+" Syntax and indent
+"------------------
+
 " Enable syntax.
 syntax on
 set showmatch
+
+" Use 4 spaces instead of tabs
+set expandtab
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+filetype plugin indent on " enable file type detection
+set autoindent
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -76,10 +88,18 @@ set scrolloff=5
 " Longer history.
 set history=8192
 
+"--------------
+" Plugin config
+"--------------
 
-" --------------------------------------------------------------
+" ctrlp
+nnoremap ; :CtrlPBuffer<CR>
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_show_hidden = 1
+
+"---------------------------------------------------------------
 " TODO: Old config territory, check again if i want to use those
-" --------------------------------------------------------------
+"---------------------------------------------------------------
 
 " Enable intentation lines
 " set list

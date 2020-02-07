@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.oh-my-zsh/custom/themes/sorbet.zsh-theme: oh-my-zsh/custom/themes/sorbet.zsh-theme
     ~/.tmux.conf:
@@ -16,8 +15,7 @@
         create: true
         path: wallpapers
 
-- create:
-    - ~/.vim/undo-history
+- create: []
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
