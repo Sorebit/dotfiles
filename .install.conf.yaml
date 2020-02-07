@@ -12,6 +12,9 @@
     ~/.vim:
     ~/.vimrc:
     ~/.zshrc:
+    ~/Pictures/Wallpapers:
+        create: true
+        path: wallpapers
 
 - create:
     - ~/.vim/undo-history
