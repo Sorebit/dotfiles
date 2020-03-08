@@ -20,14 +20,6 @@ plugins=(git sublime zsh-autosuggestions history-substring-search tmux)
 
 ## OS-specific configs
 case $(uname) in
-  Darwin)
-    # Plugins
-    plugins+=(osx)
-
-    # Aliases
-    alias sp="split_tab"
-    alias vp="vsplit_tab"
-  ;;
   Linux)
     # Plugins
     plugins+=(fedora)
@@ -94,8 +86,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Safe mv
+alias mv="mv -i"
+
 function mkcd() { mkdir -p ./$1; cd ./$1 }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
 
+# Enable local changes
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi

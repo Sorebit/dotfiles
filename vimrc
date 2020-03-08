@@ -97,6 +97,11 @@ nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+    source ~/.vimrc.local
+endif
+
 "---------------------------------------------------------------
 " TODO: Old config territory, check again if i want to use those
 "---------------------------------------------------------------
