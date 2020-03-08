@@ -8,10 +8,9 @@ This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation
 - [zsh](/zshrc) + [oh-my-zsh](/oh-my-zsh/custom/themes)
 - [tmux](/tmux.conf) (a little bit messy, but pretty usable)
 
-### Editors:
+### Editor:
 
 - [Vim](/vimrc)
-- [Sublime Text 3](/.config/sublime-text-3/Packages/User) *(Ditching soon)*
 
 ### Firefox:
 
@@ -33,3 +32,15 @@ For the color scheme to look right, you will also need to run `bin/term-prof loa
 ## License
 
 Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
+
+## TODO
+
+- System: Figure out system-wide clipboard (that means terminal and vim count, too)
+- System: Figure out a cross-system bookmark system
+- System: Write a script to dump/load Gnome keybinds
+- Vim: Learn to use vim with multiple files (nerdtree will come in handy)
+- Vim: Add configurable rulers as in subl
+- Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
+- Vim: Fix pasting
+- Other: Add support for `*.local` configs
+- Other: Try alacritty
