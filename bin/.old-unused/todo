@@ -1,9 +1,0 @@
-#!/bin/bash
-#
-# Set todo file location
-# sorbet, https://github.com/Sorebit
-
-dir="$HOME/.todo"
-
-# Display
-notify-send "$(cat $dir)"
