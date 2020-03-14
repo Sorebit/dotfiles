@@ -34,9 +34,17 @@ case $(uname) in
     alias wl="nmcli dev wifi list"
     alias wn="nmcli dev wifi connect"
     alias fehf="feh --force-alias"
-    alias xo="xdg-open"
 
     # Functions
+    # xdg-open shortcut
+    function xo() {
+        if [[ $# -ne 0 ]]; then
+          xdg-open $@
+        else
+          xdg-open .
+        fi
+    }
+
     # Override default super+num app shortcuts
     function fixGnomeAppShortcuts() {
         for i in {1..9}; do
@@ -44,6 +52,7 @@ case $(uname) in
         done &&
         gsettings list-recursively | grep switch-to-application | sort;
     }
+
     function installAddons {
         dnfi gnome-terminal-nautilus
     }
@@ -93,6 +102,10 @@ function mkcd() { mkdir -p ./$1; cd ./$1 }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Enable local changes
 if [ -f ~/.zshrc.local ]; then
