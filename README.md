@@ -30,6 +30,14 @@ Note that the install script is idempotent: it can safely be run multiple times.
 
 For the color scheme to look right, you will also need to run `bin/term-prof load gnome-terminal.conf`.
 
+## Local changes
+
+Supported `*.local` configs:
+- zsh: `~/.zshrc.local`
+- vim: `~/.vimrc.local`
+- tmux: `~/.tmux.conf.local`
+- git: `~/.gitconfig.local`
+
 ## License
 
 Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
@@ -42,5 +50,4 @@ Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LI
 - Vim: Add configurable rulers as in subl
 - Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
 - Vim: Fix pasting
-- Other: Add support for `*.local` configs
 - Other: Try alacritty
