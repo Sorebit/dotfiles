@@ -1,0 +1,69 @@
+#!/bin/bash
+#
+# gnome-keys - load or dump GNOME Keybindigs
+# Note: this script is easily transformed into an all-round GNOME
+#       config loader/dumper. See: $paths variable.
+# sorebit, https://github.com/Sorebit
+
+# Setup
+root_path="/org/gnome/"
+paths=(
+  "shell/keybindings"
+  "desktop/wm/keybindings"
+  "settings-daemon/plugins/media-keys"
+  "mutter/wayland/keybindings"
+) # Change if needed
+conf_path="./keys.conf"
+action=""
+
+# Usage
+function usage() {
+  echo "Usage: ${0} [action] [path (optional)]"
+  echo "Path defaults to '${conf_path}'"
+  echo "Supported actions:"
+  echo "  - dump: Dump keybindings to [path]"
+  echo "  - load: Load keybindings from [path]"
+  exit 1
+}
+
+# Dump
+function dump() {
+  # Clear or create config file
+  cat /dev/null > $conf_path
+
+  # Append relative path, config (without path), and trailing newline
+  for path in ${paths[*]}; do
+    full_path="${root_path}${path}/"
+
+    echo "  - ${full_path}"
+    echo "[${path}]" >> $conf_path
+    dconf dump "${full_path}" | tail -n +2 >> $conf_path
+    echo "" >> $conf_path
+  done
+}
+
+# Process action argument
+if [[ $# -le 0 ]]; then
+  echo "Not enough arguments." >&2
+  usage
+fi
+
+action=$1
+if [[ $action != "dump" && $action != "load" ]]; then
+  usage
+fi
+shift
+
+# Process config path argument
+if [[ $# -gt 0 ]]; then
+  conf_path=$1
+fi
+
+# Execute
+if [[ $action = "dump" ]]; then
+  echo "Dumping keybindings to '${conf_path}'"
+  dump
+else
+  echo "Loading keybindings from '${conf_path}'"
+  dconf load $root_path < $conf_path
+fi

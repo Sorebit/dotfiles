@@ -19,4 +19,5 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [./bin/gnome-keys load, Loading GNOME keybindings]
 
