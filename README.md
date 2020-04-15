@@ -45,7 +45,6 @@ Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LI
 ## TODO
 
 - System: Figure out system-wide clipboard (that means terminal and vim count, too)
-- System: Figure out a cross-system bookmark system
 - Vim: Learn to use vim with multiple files (nerdtree will come in handy)
 - Vim: Add configurable rulers as in subl
 - Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
