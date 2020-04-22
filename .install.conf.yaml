@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.gitconfig:
     ~/.oh-my-zsh/custom/themes/sorbet.zsh-theme: oh-my-zsh/custom/themes/sorbet.zsh-theme
     ~/.tmux.conf:

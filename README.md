@@ -4,7 +4,7 @@ This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation
 
 ### Terminal and shell:
 
-- [gnome-terminal](/gnome-terminal.conf) (using [term-prof](/bin/term-prof) to load and dump profiles)
+- [alacritty](/alacritty.yml)
 - [zsh](/zshrc) + [oh-my-zsh](/oh-my-zsh/custom/themes)
 - [tmux](/tmux.conf) (a little bit messy, but pretty usable)
 
@@ -28,8 +28,6 @@ This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation
 After cloning this repo, run `./install` to automatically set up the development environment.
 Note that the install script is idempotent: it can safely be run multiple times.
 
-For the color scheme to look right, you will also need to run `bin/term-prof load gnome-terminal.conf`.
-
 ## Local changes
 
 Supported `*.local` configs:
@@ -45,9 +43,7 @@ Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LI
 ## TODO
 
 - System: Figure out system-wide clipboard (that means terminal and vim count, too)
-- System: Figure out a cross-system bookmark system
 - Vim: Learn to use vim with multiple files (nerdtree will come in handy)
 - Vim: Add configurable rulers as in subl
 - Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
 - Vim: Fix pasting
-- Other: Try alacritty
