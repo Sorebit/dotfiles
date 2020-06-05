@@ -13,10 +13,10 @@
 [alias]
   ck = checkout
   puu = push -u origin head
+  po = push --set-upstream origin
   st = status -s
   co = commit -m
   up = pull --rebase
-  malina = push
   br = branch
   df = diff
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %an)%Creset' --abbrev-commit --date=relative
@@ -28,7 +28,7 @@
   pretty = %C(yellow)%H%Creset -%C(green)%d%Creset %s %C(red)(%an, %cr)%Creset
 [user]
   name = Sorebit
-  email = cmbk90@gmail.com
+  email = tomulewicz.s@pm.me
 [color]
   ui = true
 [difftool "sourcetree"]

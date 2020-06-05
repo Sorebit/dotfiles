@@ -22,7 +22,7 @@ plugins=(git sublime zsh-autosuggestions history-substring-search tmux)
 case $(uname) in
   Linux)
     # Plugins
-    plugins+=(fedora)
+    plugins+=(dnf)
 
     # Vim fix
     stty -ixon
