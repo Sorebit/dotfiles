@@ -16,7 +16,7 @@ font:
   size: 11.0
 
 # Disable visual bell
-visual_bell:
+bell:
   animation: EaseOut
   color: '#ffffff'
   duration: 0
