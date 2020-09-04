@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- shell:
+  - [./bin/get-wallpapers, Getting wallpapers]
+
 - link:
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.gitconfig:

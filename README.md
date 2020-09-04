@@ -47,3 +47,4 @@ Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LI
 - Vim: Add configurable rulers as in subl
 - Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
 - Vim: Fix pasting
+- Wallpapers: consider making it a submodule
