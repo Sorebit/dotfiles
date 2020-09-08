@@ -1,9 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # gnome-keys - load or dump GNOME Keybindigs
 # Note: this script is easily transformed into an all-round GNOME
-#       config loader/dumper. See: $paths variable.
-# sorebit, https://github.com/Sorebit
+#       config loader/dumper. See: $paths Variable.
+# sorebit, https://github.com/sorebit
+
+# Safety
+set -euo pipefail
 
 # Setup
 root_path="/org/gnome/"
@@ -29,16 +32,16 @@ function usage() {
 # Dump
 function dump() {
   # Clear or create config file
-  cat /dev/null > $conf_path
+  cat /dev/null > "${conf_path}"
 
   # Append relative path, config (without path), and trailing newline
   for path in ${paths[*]}; do
     full_path="${root_path}${path}/"
 
     echo "  - ${full_path}"
-    echo "[${path}]" >> $conf_path
-    dconf dump "${full_path}" | tail -n +2 >> $conf_path
-    echo "" >> $conf_path
+    echo "[${path}]" >> "${conf_path}"
+    dconf dump "${full_path}" | tail -n +2 >> "${conf_path}"
+    echo "" >> "${conf_path}"
   done
 }
 
@@ -49,7 +52,7 @@ if [[ $# -le 0 ]]; then
 fi
 
 action=$1
-if [[ $action != "dump" && $action != "load" ]]; then
+if [[ "${action}" != "dump" && "${action}" != "load" ]]; then
   usage
 fi
 shift
@@ -60,10 +63,10 @@ if [[ $# -gt 0 ]]; then
 fi
 
 # Execute
-if [[ $action = "dump" ]]; then
+if [[ "${action}" = "dump" ]]; then
   echo "Dumping keybindings to '${conf_path}'"
   dump
 else
   echo "Loading keybindings from '${conf_path}'"
-  dconf load $root_path < $conf_path
+  dconf load "${root_path}" < "${conf_path}"
 fi

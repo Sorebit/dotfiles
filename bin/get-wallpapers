@@ -1,16 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # get-wallpapers - clones wallpapers repo or updates if present.
 # sorebit, https://github.com/sorebit
+
+# Safety
+set -e
 
 # Setup
 repo_url="https://github.com/sorebit/wallpapers"
 wallpapers_dir="wallpapers"
 
 # Execute
-if [ -d "$wallpapers_dir" ]; then
-  cd "$wallpapers_dir"
+if [ -d "${wallpapers_dir}" ]; then
+  cd "${wallpapers_dir}"
   git pull
 else
-  git clone "$repo_url" "$wallpapers_dir"
+  git clone "${repo_url}" "${wallpapers_dir}"
 fi
