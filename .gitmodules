@@ -12,3 +12,6 @@
 [submodule "vim/pack/vendor/start/nerdtree"]
 	path = vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "vim/pack/vendor/start/editorconfig-vim"]
+	path = vim/pack/vendor/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
