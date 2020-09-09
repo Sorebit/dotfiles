@@ -1,11 +1,16 @@
 ## Global variables
-# export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin:$HOME/.pyenv/bin"
 export EDITOR="vim"
 
+# pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## Prompt & colors
 export ZSH_THEME="sorbet"
@@ -16,7 +21,7 @@ export GCC_COLORS=1
 export ZSH_TMUX_AUTOSTART=true
 
 ## Plugins
-plugins=(git sublime zsh-autosuggestions history-substring-search tmux)
+plugins=(git gitignore sublime zsh-autosuggestions history-substring-search tmux wd autopep8)
 
 ## OS-specific configs
 case $(uname) in
@@ -33,7 +38,6 @@ case $(uname) in
     # Aliases
     alias wl="nmcli dev wifi list"
     alias wn="nmcli dev wifi connect"
-    alias fehf="feh --force-alias"
 
     # Functions
     # xdg-open shortcut
@@ -45,17 +49,6 @@ case $(uname) in
         fi
     }
 
-    # Override default super+num app shortcuts
-    function fixGnomeAppShortcuts() {
-        for i in {1..9}; do
-            gsettings set "org.gnome.shell.keybindings" "switch-to-application-$i" "[]";
-        done &&
-        gsettings list-recursively | grep switch-to-application | sort;
-    }
-
-    function installAddons {
-        dnfi gnome-terminal-nautilus
-    }
   ;;
 esac
 
@@ -95,19 +88,20 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Safe mv
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+# Protection from overwriting
+alias cp="cp -i"
 alias mv="mv -i"
 
-function mkcd() { mkdir -p ./$1; cd ./$1 }
+## Functions
+function mkcd() { mkdir -p "${1}" && cd "${1}" }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Enable local changes
+## Enable local changes
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
