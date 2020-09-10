@@ -11,17 +11,9 @@
   smudge = git hawser smudge %f
   required = true
 [alias]
-  ck = checkout
   puu = push -u origin head
   po = push --set-upstream origin
-  st = status -s
-  co = commit -m
-  up = pull --rebase
-  br = branch
-  df = diff
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %an)%Creset' --abbrev-commit --date=relative
-  wc = whatchanged -p --abbrev-commit --pretty=medium
-  mg = merge --no-ff
 [help]
   autocorrect = 1
 [format]
