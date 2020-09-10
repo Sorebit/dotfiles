@@ -10,7 +10,7 @@ This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation
 
 ### Editor:
 
-- [Vim](/vimrc)
+- [Vim](/vimrc) + [plugins](/vim/pack/vendor/start)
 
 ### Firefox:
 
@@ -42,9 +42,9 @@ Copyright (c) 2015-2020 Simon. Released under the MIT License. See [LICENSE](/LI
 
 ## TODO
 
-- System: Figure out system-wide clipboard (that means terminal and vim count, too)
-- Vim: Learn to use vim with multiple files (nerdtree will come in handy)
-- Vim: Add configurable rulers as in subl
-- Vim: Basically copy subl setup (whitespace and stuff, maybe checkout subvim and vim-sublime)
-- Vim: Fix pasting
-- Wallpapers: consider making it a submodule
+- Vim:
+  - Learn to use vim with multiple files (nerdtree will come in handy)
+  - Add configurable rulers as in subl
+  - Add indent guides (vim-indent-guides)
+  - Add changing cursor on insert mode
+  - Add or figure out a way to toggle comments (block & single lines)

@@ -15,3 +15,6 @@
 [submodule "vim/pack/vendor/start/editorconfig-vim"]
 	path = vim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "vim/pack/vendor/start/vim-buffergator"]
+	path = vim/pack/vendor/start/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator

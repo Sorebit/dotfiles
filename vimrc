@@ -1,6 +1,9 @@
 " Make vim modern.
 set nocompatible
 
+" Bind leader to comma
+let mapleader=","
+
 "------------------
 " Syntax and indent
 "------------------
@@ -97,6 +100,9 @@ nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
+" nerdtree
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
 "-------------
 " Local config
 "-------------
@@ -115,12 +121,6 @@ endif
 
 " Stop wrapping
 " set nowrap
-
-" Disable backups
-" set nobackup
-" set nowritebackup
-" set noswapfile
-" set noundofile
 
 " hdni stuff
 " set autowrite
