@@ -73,6 +73,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" (Shift)Tab (de)indents code
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
@@ -100,8 +104,10 @@ nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
-" nerdtree
+" NERDTree
 nnoremap <Leader>n :NERDTreeToggle<CR>
+" Close vim if only window left is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "-------------
 " Local config
@@ -121,9 +127,4 @@ endif
 
 " Stop wrapping
 " set nowrap
-
-" hdni stuff
-" set autowrite
-" set matchtime=2
-" set autoread
 
