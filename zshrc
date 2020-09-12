@@ -21,8 +21,12 @@ export GCC_COLORS=1
 export ZSH_TMUX_AUTOSTART=true
 
 ## Plugins
-plugins=(git gitignore sublime zsh-autosuggestions history-substring-search tmux wd autopep8 alias-finder)
-ZSH_ALIAS_FINDER_AUTOMATIC=true # temporary for learning git aliases
+plugins=(git gitignore sublime zsh-autosuggestions history-substring-search tmux wd autopep8)
+
+# Local plugins (plugins need to be added before sourcing oh-my-zsh)
+if [ -f ~/.zshrc.plugins.local ]; then
+    source ~/.zshrc.plugins.local
+fi
 
 ## OS-specific configs
 case $(uname) in

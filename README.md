@@ -31,7 +31,9 @@ Note that the install script is idempotent: it can safely be run multiple times.
 ## Local changes
 
 Supported `*.local` configs:
-- zsh: `~/.zshrc.local`
+- zsh:
+  - `~/.zshrc.local`
+  - `~/.zshrc.plugins.local` for plugins
 - vim: `~/.vimrc.local`
 - tmux: `~/.tmux.conf.local`
 - git: `~/.gitconfig.local`
