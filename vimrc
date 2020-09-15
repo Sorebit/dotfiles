@@ -37,6 +37,9 @@ set backspace=indent,eol,start
 " Enable buffer hiding.
 set hidden
 
+" Stop wrapping
+set nowrap
+
 " Make searching better.
 set ignorecase
 set smartcase
@@ -99,6 +102,8 @@ set history=8192
 " Plugin config
 "--------------
 
+filetype plugin on
+
 " ctrlp
 nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
@@ -124,7 +129,4 @@ endif
 " Enable intentation lines
 " set list
 " set listchars=tab:\┆\ 
-
-" Stop wrapping
-" set nowrap
 

@@ -1,0 +1,35 @@
+# Folder view configuration files
+ .DS_Store
+ Desktop.ini
+
+ # Thumbnail cache files
+ ._*
+ Thumbs.db
+
+ # Files that might appear on external disks
+ .Spotlight-V100
+ .Trashes
+
+# Vim stuff
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+# RSA keys, just in case
+*rsa*
