@@ -21,7 +21,7 @@ export GCC_COLORS=1
 export ZSH_TMUX_AUTOSTART=true
 
 ## Plugins
-plugins=(git gitignore sublime zsh-autosuggestions history-substring-search tmux wd autopep8)
+plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8)
 
 # Local plugins (plugins need to be added before sourcing oh-my-zsh)
 if [ -f ~/.zshrc.plugins.local ]; then
@@ -96,6 +96,9 @@ alias .....="cd ../../../.."
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+alias sd="sdcv --color"
+alias virtualenv="pyenv virtualenv"  # No more mixing up
+
 # Protection from overwriting
 alias cp="cp -i"
 alias mv="mv -i"
@@ -104,6 +107,12 @@ alias mv="mv -i"
 function mkcd() { mkdir -p "${1}" && cd "${1}" }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+}
+function pyproj() {
+  # Usage: pyproj <python_version> <project_name>
+  mkdir $2 && cd $2 &&
+  pyenv local $1 && pyenv virtualenv venv-$2 &&
+  pyenv local venv-$2 && pyenv activate venv-$2
 }
 
 ## Enable local changes

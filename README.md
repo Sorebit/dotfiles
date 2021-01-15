@@ -1,6 +1,6 @@
 # Dotfiles
 
-![screenshot](/screenshot.png)
+![screenshot](/bin/assets/screenshot.png)
 
 ### Terminal and shell:
 
