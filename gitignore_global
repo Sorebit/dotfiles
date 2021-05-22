@@ -1,14 +1,14 @@
 # Folder view configuration files
- .DS_Store
- Desktop.ini
+.DS_Store
+Desktop.ini
 
- # Thumbnail cache files
- ._*
- Thumbs.db
+# Thumbnail cache files
+._*
+Thumbs.db
 
- # Files that might appear on external disks
- .Spotlight-V100
- .Trashes
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
 
 # Vim stuff
 # Swap
