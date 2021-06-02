@@ -33,3 +33,5 @@
     helper = cache --timeout=2628000
 [include]
     path = ~/.gitconfig.local
+[status]
+	submoduleSummary = true

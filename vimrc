@@ -86,6 +86,7 @@ set splitright
 
 " Colorscheme
 colorscheme vim-color-scheme
+highlight ColorColumn ctermbg=black
 
 " Save position
 if has("autocmd")
