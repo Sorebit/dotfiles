@@ -50,3 +50,5 @@ Copyright (c) 2015-2021 Simon. Released under the MIT License. See [LICENSE](/LI
   - Add indent guides (vim-indent-guides)
   - Add changing cursor on insert mode
   - Add or figure out a way to toggle comments (block & single lines)
+- Gnome:
+  - Add switching between `stdout` and specified file in [bin/gnome-keys](bin/gnome-keys)

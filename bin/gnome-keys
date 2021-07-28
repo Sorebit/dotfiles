@@ -4,6 +4,8 @@
 # Note: this script is easily transformed into an all-round GNOME
 #       config loader/dumper. See: $paths Variable.
 # sorebit, https://github.com/sorebit
+#
+# TODO: Feature: When no path is specified (or maybe switch with an option) dump to stdout.
 
 # Safety
 set -euo pipefail

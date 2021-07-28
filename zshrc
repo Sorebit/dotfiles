@@ -103,6 +103,9 @@ alias virtualenv="pyenv virtualenv"  # No more mixing up
 alias cp="cp -i"
 alias mv="mv -i"
 
+# Alias finder shorthand
+alias afl="alias-finder -l"
+
 ## Functions
 function mkcd() { mkdir -p "${1}" && cd "${1}" }
 function installAutosuggestions() {
