@@ -1,6 +1,8 @@
 # This is Git's per-user configuration file.
 [core]
     excludesfile = ~/.gitignore_global
+[init]
+    defaultBranch = main
 [filter "lfs"]
     required = true
     clean = git-lfs clean -- %f
@@ -21,3 +23,7 @@
     path = ~/.gitconfig.local
 [status]
     submoduleSummary = true
+[diff]
+    submodule = log
+[push]
+    recurseSubmodules = on-demand
