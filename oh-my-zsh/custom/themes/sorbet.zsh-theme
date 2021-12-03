@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$reset_color%}>:%{$fg_bold[red]%}>)"
+local ret_status="%(?:%{$reset_color%}>:%{$fg_bold[red]%}%? >)"
 
 function root() {
   [[ $UID -eq 0 ]] && echo "%{$reset_colors%}root "

@@ -20,6 +20,7 @@
 
 - Icons: [Boston](https://github.com/heychrisd/Boston-Icons)
 - [Keybindings](keys.conf) (using [gnome-keys](/bin/gnome-keys) for loading and dumping)
+- Extensions: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/), [gTile](https://extensions.gnome.org/extension/28/gtile/)
 
 ## Installation
 
@@ -41,14 +42,3 @@ Supported `*.local` configs:
 ## License
 
 Copyright (c) 2015-2021 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
-
-## TODO
-
-- Vim:
-  - Learn to use vim with multiple files (nerdtree will come in handy)
-  - Add configurable rulers as in subl
-  - Add indent guides (vim-indent-guides)
-  - Add changing cursor on insert mode
-  - Add or figure out a way to toggle comments (block & single lines)
-- Gnome:
-  - Add switching between `stdout` and specified file in [bin/gnome-keys](bin/gnome-keys)

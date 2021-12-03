@@ -4,6 +4,8 @@
 
 - clean: ['~']
 
+- create: ['~/.config/alacritty/']
+
 - shell:
   - [./bin/get-wallpapers, Getting wallpapers]
 
@@ -20,7 +22,7 @@
         create: true
         path: wallpapers
 
-- create: []
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
