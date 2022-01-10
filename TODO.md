@@ -16,3 +16,5 @@
   - extensions:
     - find out if its possible to automate installing extensions (and extensions app itself i guess)
     - user themes for fixing adwaita
+  - SSH:
+    - https://stackoverflow.com/questions/41287226/ssh-asking-every-single-time-for-passphrase
