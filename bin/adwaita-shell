@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# awaita-shell - extracts and saves default Adwaita shell theme for GNOME.
+# Requires gnome-tweaks and User Themes extension.
+# Also sudo apt install font-cantarell for default fonts.
+# sorebit, https://github.com/sorebit
+
+# Safety
+set -e
+
+# Setup
+theme_dir="~/.themes/Adwaita/gnome-shell/"
+gres_path="/usr/share/gnome-shell/gnome-shell-theme.gresource"
+gnome_theme_dir="/org/gnome/shell/theme"
+css_file="gnome_shell.css"
+
+# Execute
+mkdir -p "${theme_dir}"
+gresource extract "${gres_path}" "${gnome_theme_dir}/${css_file}" > "${theme_dir}/${css_file}"
+

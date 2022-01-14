@@ -21,6 +21,7 @@
 - Icons: [Boston](https://github.com/heychrisd/Boston-Icons)
 - [Keybindings](keys.conf) (using [gnome-keys](/bin/gnome-keys) for loading and dumping)
 - Extensions: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/), [gTile](https://extensions.gnome.org/extension/28/gtile/)
+- [Utility script](/bin/adwaita-shell) for extracting and installing default Adwaita theme on Ubuntu
 
 ## Installation
 
