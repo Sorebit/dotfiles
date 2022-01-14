@@ -8,6 +8,7 @@
   - Add or figure out a way to toggle comments (block & single lines)
 - Gnome:
   - Add switching between `stdout` and specified file in [bin/gnome-keys](bin/gnome-keys)
+  - script for generating switch / move to workspace number
   - script for enabling default Adwaita
     - mkdir -p ~/.themes/Adwaita/gnome-shell
     - gresource extract /usr/share/gnome-shell/gnome-shell-theme.gresource /org/gnome/shell/theme/gnome-shell.css > ~/.themes/Adwaita/gnome-shell/gnome-shell.css
