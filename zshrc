@@ -46,7 +46,7 @@ case $(uname) in
 
     # Functions
     # xdg-open shortcut
-    function xo() {
+    function open() {
         if [[ $# -ne 0 ]]; then
           xdg-open $@
         else
@@ -112,6 +112,10 @@ function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
 function pyproj() {
+  #if $@ -lt 2 {
+  #  echo '${0} <pyton version <project_name>'
+  #  exit
+  #}
   # Usage: pyproj <python_version> <project_name>
   mkdir $2 && cd $2 &&
   pyenv local $1 && pyenv virtualenv venv-$2 &&

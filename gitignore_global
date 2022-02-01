@@ -33,3 +33,6 @@ tags
 
 # RSA keys, just in case
 *rsa*
+
+# IntelliJ
+.idea

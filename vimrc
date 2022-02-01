@@ -21,6 +21,8 @@ set softtabstop=2
 filetype plugin indent on " enable file type detection
 set autoindent
 
+" Toggle paste mode (fixes autoindentation when pasting)
+set pastetoggle=<F3>
 " Disable the default Vim startup message.
 set shortmess+=I
 
@@ -70,15 +72,19 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+" 'Smooth' scrolling (aka jump by 10 lines)
+nnoremap J 10gj
+nnoremap K 10gk
+
 " Quicker window movement.
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" (Shift)Tab (de)indents code
-vnoremap <Tab> >
-vnoremap <S-Tab> <
+" (Shift)Tab (de)indents code and stays in visual mode
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -98,6 +104,9 @@ set scrolloff=5
 
 " Longer history.
 set history=8192
+
+" Hide default mode status
+set noshowmode
 
 "--------------
 " Plugin config
