@@ -21,13 +21,26 @@
 - Icons: [Boston](https://github.com/heychrisd/Boston-Icons)
 - [Keybindings](keys.conf) (using [gnome-keys](/bin/gnome-keys) for loading and dumping)
 - Extensions: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/), [gTile](https://extensions.gnome.org/extension/28/gtile/)
+- [Utility script](/bin/adwaita-shell) for extracting and installing default Adwaita theme on Ubuntu
 
 ## Installation
 
-This repo uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
+This repo uses [Dotbot][dotbot] for installation.
 
-After cloning this repo, run `./install` to automatically set up the development environment.
-Note that the install script is idempotent: it can safely be run multiple times.
+**Clone:**
+
+```
+$ git clone https://github.com/sorebit/dotfiles ~/.dotfiles
+```
+
+**Install with [Dotbot][dotbot]:**
+
+```shell
+$ cd ~/.dotfiles
+$ ./install
+```
+
+**Note**, that the install script is idempotent: it can safely be run multiple times.
 
 ## Local changes
 
@@ -42,3 +55,5 @@ Supported `*.local` configs:
 ## License
 
 Copyright (c) 2015-2021 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
+
+[dotbot]: https://github.com/anishathalye/dotbot
