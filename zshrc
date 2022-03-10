@@ -1,10 +1,11 @@
 ## Global variables
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin:$HOME/.pyenv/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:/usr/local/opt/erlang@20/bin:$HOME/.rvm/bin:$PATH"
 export EDITOR="vim"
 
 # pyenv
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # NVM
@@ -21,12 +22,16 @@ export GCC_COLORS=1
 export ZSH_TMUX_AUTOSTART=true
 
 ## Plugins
-plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8)
+plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8 docker docker-compose)
 
 # Local plugins (plugins need to be added before sourcing oh-my-zsh)
 if [ -f ~/.zshrc.plugins.local ]; then
     source ~/.zshrc.plugins.local
 fi
+
+# Enable options stacking for docker autosuggestions
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 ## OS-specific configs
 case $(uname) in

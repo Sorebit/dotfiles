@@ -9,7 +9,7 @@
 set -e
 
 # Setup
-theme_dir="~/.themes/Adwaita/gnome-shell/"
+theme_dir="$HOME/.themes/Adwaita/gnome-shell/"
 gres_path="/usr/share/gnome-shell/gnome-shell-theme.gresource"
 gnome_theme_dir="/org/gnome/shell/theme"
 css_file="gnome_shell.css"
