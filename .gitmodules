@@ -21,3 +21,6 @@
 [submodule "vim/pack/vendor/start/nerdcommenter"]
 	path = vim/pack/vendor/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter
+[submodule "vim/pack/plugins/start/lightline"]
+	path = vim/pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim

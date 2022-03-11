@@ -36,3 +36,7 @@ tags
 
 # IntelliJ
 .idea
+
+# Virtual envs
+venv
+.venv
