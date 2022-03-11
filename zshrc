@@ -1,6 +1,6 @@
 ## Global variables
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin:$HOME/.pyenv/bin"
+export PATH="$HOME/.local/bin:/usr/local/opt/erlang@20/bin:$PATH:$HOME/.rvm/bin:$HOME/.pyenv/bin"
 export EDITOR="vim"
 
 # pyenv
