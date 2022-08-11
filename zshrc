@@ -23,7 +23,7 @@ export GCC_COLORS=1
 export ZSH_TMUX_AUTOSTART=true
 
 ## Plugins
-plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8 docker docker-compose)
+plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8 docker docker-compose alias-finder)
 
 # Local plugins (plugins need to be added before sourcing oh-my-zsh)
 if [ -f ~/.zshrc.plugins.local ]; then
@@ -109,8 +109,12 @@ alias virtualenv="pyenv virtualenv"  # No more mixing up
 alias cp="cp -i"
 alias mv="mv -i"
 
-# Alias finder shorthand
+# Alias finder shorthands
+ZSH_ALIAS_FINDER_AUTOMATIC=true
 alias afl="alias-finder -l"
+
+# Docker shorthands
+alias dcef="docker-compose --env-file"
 
 ## Functions
 function mkcd() { mkdir -p "${1}" && cd "${1}" }
