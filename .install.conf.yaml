@@ -4,7 +4,7 @@
 
 - clean: ['~']
 
-- create: ['~/.config/alacritty/']
+- create: ['~/.config/alacritty/', '~/.local/share/applications']
 
 - shell:
   - [./bin/get-wallpapers, Getting wallpapers]
@@ -21,7 +21,8 @@
     ~/Pictures/Wallpapers:
         create: true
         path: wallpapers
-
+    ~/.local/share/applications/obsidian.desktop: applications/obsidian.desktop
+    ~/.local/share/applications/obsidian.png: applications/obsidian.png
 
 
 - shell:
