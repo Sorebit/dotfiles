@@ -4,6 +4,8 @@
 # Requires gnome-tweaks and User Themes extension.
 # Also sudo apt install font-cantarell for default fonts.
 # sorebit, https://github.com/sorebit
+#
+# Note: This seems to be deprecated since on new GNOME even Ubuntu allows you to pick the default accent color for Adwaita.
 
 # Safety
 set -e
