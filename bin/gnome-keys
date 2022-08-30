@@ -12,9 +12,12 @@ set -euo pipefail
 
 # Setup
 root_path="/org/gnome/"
+# Which 
 paths=(
   "shell/keybindings"
   "desktop/wm/keybindings"
+  "dektop/wm/preferences"  # Enable 4 static workspaces
+  "mutter"  # Disable dynamic workspaces
   "settings-daemon/plugins/media-keys"
   "mutter/wayland/keybindings"
 ) # Change if needed

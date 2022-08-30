@@ -40,3 +40,6 @@ tags
 # Virtual envs
 venv
 .venv
+
+# VS Code
+.vscode

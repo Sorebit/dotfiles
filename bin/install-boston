@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+# install-boston - Installs Boston Icon theme from submodule
+
+set -e
+
+icons_dir="$HOME/.icons"
+boston_dir="${icons_dir}/Boston"
+src_dir="./dist/Boston-Icons"
+
+# Create the directory, removing all of its contents
+echo "Create and empty directory: ${boston_dir}"
+mkdir -p "${boston_dir}"
+
+# Remove contents of boston_dir, if any
+shopt -s nullglob dotglob  # Set to include hidden files
+files=$(echo "${boston_dir}"/*)
+if (( ${#files} )); then
+  # If it does, remove all contents
+  rm -r "${boston_dir}"/*
+fi
+shopt -u nullglob dotglob  # Unset to go back to normal
+
+# Copy theme to output folder 
+echo "Copy files from ${src_dir} to ${boston_dir}"
+cp -r "${src_dir}"/* "${boston_dir}"
+
+# TODO: Add argument for boston path and default to this one
+
+# Set theme
+gsettings set org.gnome.desktop.interface icon-theme 'Boston'
+
+# Pull Request: Fix "No such file or directory" error
+# When installing into a clean environment (no ~/.icons/Boston), calling rm -rf ~/.icon/Boston/* would
+# result in an error:
+
+```
+rm: cannot remove '/home/simon/.icons/Boston/*': No such file or directory
+```
+
+To prevent this, I implemented a check againt any files actually being present in that directory.
+
