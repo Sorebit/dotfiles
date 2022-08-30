@@ -43,3 +43,6 @@ venv
 
 # VS Code
 .vscode
+
+# Dotenvs I guess
+.env

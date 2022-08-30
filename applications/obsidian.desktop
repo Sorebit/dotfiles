@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Obsidian
+Comment=Markdown Notetaking App
+GenericName=Text Editor
+Type=Application
+# The version of the desktop entry specification to which this file complies
+Version=1.0.0
+# Expects Obsidian-latest.AppImage to be present. I usually symlink it to the latest version
+# Can this be indepented of username? Probably by installing this system-wide into /usr/share/applications
+Exec=/home/simon/.local/share/applications/Obsidian-latest.AppImage %U
+Icon=/home/simon/.local/share/applications/obsidian.png
+StartupWMClass=obsidian
+MimeType=x-scheme-handler/obsidian;
