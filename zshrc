@@ -132,6 +132,8 @@ function pyproj() {
   pyenv local venv-$2 && pyenv activate venv-$2
 }
 
+alias jn="jupyter notebook"
+
 ## Enable local changes
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local

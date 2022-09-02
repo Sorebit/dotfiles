@@ -52,6 +52,10 @@ Supported `*.local` configs:
 - tmux: `~/.tmux.conf.local`
 - git: `~/.gitconfig.local`
 
+## Third party submodules (see /dist):
+
+- 
+
 ## License
 
 Copyright (c) 2015-2021 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
