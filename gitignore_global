@@ -32,7 +32,13 @@ tags
 [._]*.un~
 
 # RSA keys, just in case
-*rsa*
+*.key
+*.keys
+*.priv
+*.rsa
+*.key.json
+*.ssh
+*.ssh-key
 
 # IntelliJ
 .idea
