@@ -20,7 +20,7 @@
 
 - Icons: [Boston](https://github.com/heychrisd/Boston-Icons)
 - [Keybindings](keys.conf) (using [gnome-keys](/bin/gnome-keys) for loading and dumping)
-- Extensions: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/), [gTile](https://extensions.gnome.org/extension/28/gtile/)
+- Extensions: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 - [Utility script](/bin/adwaita-shell) for extracting and installing default Adwaita theme on Ubuntu
 
 ## Installation
@@ -44,13 +44,16 @@ $ ./install
 
 ## Local changes
 
+These dotfiles support adding local configuration files which are not stored in the repo.
+This might comes handy when configuration needs to contain some secrets or credentials (eg. gitconfig)
+
 Supported `*.local` configs:
-- zsh:
-  - `~/.zshrc.local`
-  - `~/.zshrc.plugins.local` for plugins
-- vim: `~/.vimrc.local`
-- tmux: `~/.tmux.conf.local`
-- git: `~/.gitconfig.local`
+- ZSH:
+  - `~/.zshrc.plugins.local` - sourced *before* oh-my-zsh (see [zshrc](/zshrc) for more details)
+  - `~/.zshrc.local` - sourced *after* oh-my-zsh
+- Vim: `~/.vimrc.local`
+- TMUX: `~/.tmux.conf.local`
+- Git: `~/.gitconfig.local`
 
 ## Third party submodules (see /dist):
 
@@ -58,6 +61,6 @@ Supported `*.local` configs:
 
 ## License
 
-Copyright (c) 2015-2021 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
+Copyright (c) 2015-2022 Simon. Released under the MIT License. See [LICENSE](/LICENSE) for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot

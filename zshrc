@@ -14,13 +14,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 ## Prompt & colors
 export ZSH_THEME="sorbet"
 autoload -U colors && colors
 export GCC_COLORS=1
 
+
 ## Autostart tmux
 export ZSH_TMUX_AUTOSTART=true
+
 
 ## Plugins
 plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8 docker docker-compose alias-finder)
@@ -30,9 +33,11 @@ if [ -f ~/.zshrc.plugins.local ]; then
     source ~/.zshrc.plugins.local
 fi
 
+
 # Enable options stacking for docker autosuggestions
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
 
 ## OS-specific configs
 case $(uname) in
@@ -69,12 +74,14 @@ source $ZSH/oh-my-zsh.sh
 # Alternatively
 # source "${ZDOTDIR:-${HOME}}/.zshrc-`uname`"
 
+
 ## Completion & correction
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 bindkey '^[[Z' reverse-menu-complete
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 ENABLE_CORRECTION="true"
+
 
 ## History
 HISTSIZE=1000
@@ -86,7 +93,12 @@ setopt inc_append_history
 setopt share_history
 zmodload zsh/terminfo
 
+
 ## Aliases
+# Alias finder plugin shorthands
+ZSH_ALIAS_FINDER_AUTOMATIC=true
+alias afl="alias-finder -l"
+
 alias l="ls -l"
 alias la="ls -lAFh"
 alias lr="ls -tRFh"
@@ -109,30 +121,19 @@ alias virtualenv="pyenv virtualenv"  # No more mixing up
 alias cp="cp -i"
 alias mv="mv -i"
 
-# Alias finder shorthands
-ZSH_ALIAS_FINDER_AUTOMATIC=true
-alias afl="alias-finder -l"
-
-# Docker shorthands
+# Common shorthands
 alias dcef="docker-compose --env-file"
+alias jn="jupyter notebook"
+# Recursively change ownership
+alias rch="sudo chown -R $(whoami):$(whoami)"
+
 
 ## Functions
 function mkcd() { mkdir -p "${1}" && cd "${1}" }
 function installAutosuggestions() {
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
-function pyproj() {
-  #if $@ -lt 2 {
-  #  echo '${0} <pyton version <project_name>'
-  #  exit
-  #}
-  # Usage: pyproj <python_version> <project_name>
-  mkdir $2 && cd $2 &&
-  pyenv local $1 && pyenv virtualenv venv-$2 &&
-  pyenv local venv-$2 && pyenv activate venv-$2
-}
 
-alias jn="jupyter notebook"
 
 ## Enable local changes
 if [ -f ~/.zshrc.local ]; then
