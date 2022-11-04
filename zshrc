@@ -22,7 +22,7 @@ export GCC_COLORS=1
 
 
 ## Autostart tmux
-export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_AUTOSTART=true
 
 
 ## Plugins
