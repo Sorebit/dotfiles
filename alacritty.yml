@@ -3,7 +3,7 @@
 window:
   decorations: none
   startup_mode: Maximized 
-  decorations_theme_variant: dark
+  decorations_theme_variant: Dark
   # Window padding (changes require restart)
   padding:
     x: 10
