@@ -33,44 +33,5 @@ bell:
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
 
-# Colors I could take some things out of
-# Hybrid, Oceanic Next, Oxide
-
-# Colors
-colors:
-  # Default colors
-  primary:
-    background: '#161719'
-    foreground: '#dedfd5'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text:   '#6c717a'
-    cursor: '#414348'
-
-  # Selection colors
-  selection:
-    text:       '#dedfd5'
-    background: '#414348'
-
-  # Normal colors
-  normal:
-    black:   '#565a61'
-    red:     '#b65d64'
-    green:   '#9bb989'
-    yellow:  '#efc97a' # which is actually bright i guess?
-    blue:    '#7d96ad'
-    magenta: '#8a7489'
-    cyan:    '#70b6a8'
-    white:   '#b9bbc1'
-
-  # Bright colors
-  bright:
-    black:   '#6c717a'
-    red:     '#e3747d'
-    green:   '#abcc97'
-    yellow:  '#c87f66' # which is dark
-    blue:    '#97b6d2'
-    magenta: '#ab8ba9'
-    cyan:    '#79c4b5'
-    white:   '#d6d8db'
+import:
+ - ~/.config/alacritty/themes/themes/solarized_light.yaml

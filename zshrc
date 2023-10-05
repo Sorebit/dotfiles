@@ -26,7 +26,7 @@ export GCC_COLORS=1
 
 
 ## Plugins
-plugins=(git gitignore zsh-autosuggestions history-substring-search tmux wd autopep8 docker docker-compose alias-finder)
+plugins=(git gitignore zsh-autosuggestions history-substring-search tmux docker docker-compose alias-finder)
 
 # Local plugins (plugins need to be added before sourcing oh-my-zsh)
 if [ -f ~/.zshrc.plugins.local ]; then

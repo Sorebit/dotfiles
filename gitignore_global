@@ -32,8 +32,6 @@ tags
 [._]*.un~
 
 # RSA keys, just in case
-*.key
-*.keys
 *.priv
 *.rsa
 *.key.json
@@ -52,3 +50,5 @@ venv
 
 # Dotenvs I guess
 .env
+
+node_modules
