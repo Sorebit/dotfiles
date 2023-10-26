@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -e
+
+dotfiles_root="$HOME/.dotfiles"
+
+os=$(uname)
+case $os in
+  Linux)
+    distro=$(lsb_release -is)
+    echo "Assuming this is ${os}, ${distro}"
+    script_path="${dotfiles_root}/bin/os-specific/${os}-${distro}"
+  ;;
+  Darwin)
+    echo "Assuming this is MacOS"
+    script_path="${dotfiles_root}/bin/os-specific/${os}"
+  ;;
+esac
+
+
+echo "Do you want to install OS-specific dependecies?"
+select yn in "Yes" "No"; do
+  case $yn in
+    Yes)
+      echo "Attempting to install dependencies from ${script_path}";
+      bash $script_path; break;;
+    No) break;;
+  esac
+done

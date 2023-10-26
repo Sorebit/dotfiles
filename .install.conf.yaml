@@ -4,9 +4,14 @@
 
 - clean: ['~']
 
-- create: ['~/.config/alacritty/', '~/.local/share/applications']
+- create: ['~/.config/alacritty/', '~/.local/share/applications', '~/.icons/']
 
 - shell:
+  - 
+    command: ./bin/install-os-specific 
+    stdin: true
+    stdout: true
+    stderr: true
   - [./bin/get-wallpapers, Getting wallpapers]
 
 - link:
@@ -29,3 +34,7 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [./bin/gnome-keys load, Loading GNOME keybindings]
 
+- link:
+    ~/.icons/Boston-Icons:
+        create: true
+        path: dist/Boston-Icons

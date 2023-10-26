@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+sudo apt update;
+
+# Pyenv
+sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev;
+curl https://pyenv.run | bash;
+
+# Gnome tweaks requirements
+sudo apt install zsh gnome-browser-connector gnome-shell-extension-manager gnome-tweaks;
+
+# zsh + oh-my-zshell
+sudo apt install zsh;
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)";
+
