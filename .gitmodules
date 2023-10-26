@@ -30,3 +30,6 @@
 [submodule "dist/Boston-Installer"]
 	path = dist/Boston-Installer
 	url = git@github.com:Sorebit/Boston-Installer.git
+[submodule "alacritty-theme"]
+	path = alacritty-theme
+	url = https://github.com/alacritty/alacritty-theme
