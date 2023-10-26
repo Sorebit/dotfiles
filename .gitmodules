@@ -24,12 +24,6 @@
 [submodule "vim/pack/plugins/start/lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
-[submodule "dist/Boston-Icons"]
-	path = dist/Boston-Icons
-	url = git@github.com:thecheis/Boston-Icons.git
-[submodule "dist/Boston-Installer"]
-	path = dist/Boston-Installer
-	url = git@github.com:Sorebit/Boston-Installer.git
 [submodule "alacritty-theme"]
 	path = alacritty-theme
 	url = https://github.com/alacritty/alacritty-theme
