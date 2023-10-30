@@ -10,7 +10,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -19,10 +19,6 @@ export NVM_DIR="$HOME/.nvm"
 export ZSH_THEME="sorbet"
 autoload -U colors && colors
 export GCC_COLORS=1
-
-
-## Autostart tmux
-# export ZSH_TMUX_AUTOSTART=true
 
 
 ## Plugins
@@ -122,7 +118,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 # Common shorthands
-alias dcef="docker-compose --env-file"
+alias dcef="docker compose --env-file .env"
 alias jn="jupyter notebook"
 # Recursively change ownership
 alias rch="sudo chown -R $(whoami):$(whoami)"
