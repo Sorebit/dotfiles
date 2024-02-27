@@ -15,7 +15,7 @@
   - [./bin/get-wallpapers, Getting wallpapers]
 
 - link:
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.oh-my-zsh/custom/themes/sorbet.zsh-theme: oh-my-zsh/custom/themes/sorbet.zsh-theme

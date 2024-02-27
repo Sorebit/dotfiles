@@ -1,0 +1,23 @@
+import = ["/home/simon/.dotfiles/alacritty-theme/themes/solarized_light.toml"]
+
+[bell]
+animation = "EaseOut"
+color = "#ffffff"
+duration = 0
+
+[font]
+size = 11.0
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[window]
+decorations = "none"
+decorations_theme_variant = "Dark"
+dynamic_padding = true
+startup_mode = "Maximized"
+
+[window.padding]
+x = 10
+y = 10
