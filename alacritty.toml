@@ -1,4 +1,4 @@
-import = ["/home/simon/.dotfiles/alacritty-theme/themes/solarized_light.toml"]
+import = ["~/.dotfiles/alacritty-theme/themes/solarized_light.toml"]
 
 [bell]
 animation = "EaseOut"
